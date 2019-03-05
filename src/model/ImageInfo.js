@@ -44,14 +44,12 @@
    * @class
    * @param url {String} 
    * @param thumb {String} 
-   * @param caption {String} 
    */
-  var exports = function(url, thumb, caption) {
+  var exports = function(url, thumb) {
     var _this = this;
 
     _this['url'] = url;
     _this['thumb'] = thumb;
-    _this['caption'] = caption;
   };
 
   /**
