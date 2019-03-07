@@ -104,6 +104,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property facebookEmbed (base name: "facebookEmbed")', function() {
+      // uncomment below and update the code to test the property facebookEmbed
+      //var instance = new Lettera.Block();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -82,6 +82,9 @@
       if (data.hasOwnProperty('twitterEmbed')) {
         obj['twitterEmbed'] = ApiClient.convertToType(data['twitterEmbed'], 'String');
       }
+      if (data.hasOwnProperty('facebookEmbed')) {
+        obj['facebookEmbed'] = ApiClient.convertToType(data['facebookEmbed'], 'String');
+      }
     }
     return obj;
   }
@@ -118,6 +121,10 @@
    * @member {String} twitterEmbed
    */
   exports.prototype['twitterEmbed'] = undefined;
+  /**
+   * @member {String} facebookEmbed
+   */
+  exports.prototype['facebookEmbed'] = undefined;
 
 
 

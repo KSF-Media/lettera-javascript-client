@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **instagramEmbed** | **String** |  | [optional] 
 **infogramEmbed** | **[Object]** |  | [optional] 
 **twitterEmbed** | **String** |  | [optional] 
+**facebookEmbed** | **String** |  | [optional] 
 
 
