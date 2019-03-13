@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Article'], factory);
+    define(['ApiClient', 'model/ListArticle'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Article'));
+    module.exports = factory(require('../ApiClient'), require('../model/ListArticle'));
   } else {
     // Browser globals (root is window)
     if (!root.Lettera) {
       root.Lettera = {};
     }
-    root.Lettera.ListsApi = factory(root.Lettera.ApiClient, root.Lettera.Article);
+    root.Lettera.ListsApi = factory(root.Lettera.ApiClient, root.Lettera.ListArticle);
   }
-}(this, function(ApiClient, Article) {
+}(this, function(ApiClient, ListArticle) {
   'use strict';
 
   /**
@@ -51,13 +51,13 @@
      * Callback function to receive the result of the listGet operation.
      * @callback module:api/ListsApi~listGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {Array.<module:model/ListArticle>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {module:api/ListsApi~listGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Article>}
+     * data is of type: {@link Array.<module:model/ListArticle>}
      */
     this.listGet = function(callback) {
       var postBody = null;
@@ -77,7 +77,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = [Article];
+      var returnType = [ListArticle];
 
       return this.apiClient.callApi(
         '/list', 'GET',

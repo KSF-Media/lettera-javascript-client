@@ -127,6 +127,7 @@ Class | Method | HTTP request | Description
  - [Lettera.Block](docs/Block.md)
  - [Lettera.BlockShortcodeError](docs/BlockShortcodeError.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
+ - [Lettera.ListArticle](docs/ListArticle.md)
 
 
 ## Documentation for Authorization

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listGet"></a>
 # **listGet**
-> [Article] listGet()
+> [ListArticle] listGet()
 
 
 
@@ -33,7 +33,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Article]**](Article.md)
+[**[ListArticle]**](ListArticle.md)
 
 ### Authorization
 
