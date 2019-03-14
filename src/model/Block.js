@@ -76,6 +76,9 @@
       if (data.hasOwnProperty('shortcodeError')) {
         obj['shortcodeError'] = BlockShortcodeError.constructFromObject(data['shortcodeError']);
       }
+      if (data.hasOwnProperty('embed')) {
+        obj['embed'] = ApiClient.convertToType(data['embed'], [Object]);
+      }
       if (data.hasOwnProperty('instagramEmbed')) {
         obj['instagramEmbed'] = ApiClient.convertToType(data['instagramEmbed'], 'String');
       }
@@ -116,6 +119,10 @@
    * @member {module:model/BlockShortcodeError} shortcodeError
    */
   exports.prototype['shortcodeError'] = undefined;
+  /**
+   * @member {Array.<Object>} embed
+   */
+  exports.prototype['embed'] = undefined;
   /**
    * @member {String} instagramEmbed
    */

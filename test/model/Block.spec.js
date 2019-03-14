@@ -92,6 +92,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property embed (base name: "embed")', function() {
+      // uncomment below and update the code to test the property embed
+      //var instance = new Lettera.Block();
+      //expect(instance).to.be();
+    });
+
     it('should have the property instagramEmbed (base name: "instagramEmbed")', function() {
       // uncomment below and update the code to test the property instagramEmbed
       //var instance = new Lettera.Block();

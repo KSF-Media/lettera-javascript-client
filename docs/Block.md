@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **factBox** | [**FactInfo**](FactInfo.md) |  | [optional] 
 **headline** | **String** |  | [optional] 
 **shortcodeError** | [**BlockShortcodeError**](BlockShortcodeError.md) |  | [optional] 
+**embed** | **[Object]** |  | [optional] 
 **instagramEmbed** | **String** |  | [optional] 
 **infogramEmbed** | **[Object]** |  | [optional] 
 **twitterEmbed** | **String** |  | [optional] 

@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **body** | [**[Block]**](Block.md) |  | 
 **premium** | **Boolean** |  | 
 **publishingTime** | **String** |  | 
+**externalScripts** | **[String]** |  | [optional] 
 
 
