@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/BlockShortcodeError', 'model/ImageInfo'], factory);
+    define(['ApiClient', 'model/BlockShortcodeError', 'model/FactInfo', 'model/ImageInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./BlockShortcodeError'), require('./ImageInfo'));
+    module.exports = factory(require('../ApiClient'), require('./BlockShortcodeError'), require('./FactInfo'), require('./ImageInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.Lettera) {
       root.Lettera = {};
     }
-    root.Lettera.Block = factory(root.Lettera.ApiClient, root.Lettera.BlockShortcodeError, root.Lettera.ImageInfo);
+    root.Lettera.Block = factory(root.Lettera.ApiClient, root.Lettera.BlockShortcodeError, root.Lettera.FactInfo, root.Lettera.ImageInfo);
   }
-}(this, function(ApiClient, BlockShortcodeError, ImageInfo) {
+}(this, function(ApiClient, BlockShortcodeError, FactInfo, ImageInfo) {
   'use strict';
 
 
@@ -67,6 +67,9 @@
       if (data.hasOwnProperty('image')) {
         obj['image'] = ImageInfo.constructFromObject(data['image']);
       }
+      if (data.hasOwnProperty('factBox')) {
+        obj['factBox'] = FactInfo.constructFromObject(data['factBox']);
+      }
       if (data.hasOwnProperty('headline')) {
         obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
       }
@@ -101,6 +104,10 @@
    * @member {module:model/ImageInfo} image
    */
   exports.prototype['image'] = undefined;
+  /**
+   * @member {module:model/FactInfo} factBox
+   */
+  exports.prototype['factBox'] = undefined;
   /**
    * @member {String} headline
    */

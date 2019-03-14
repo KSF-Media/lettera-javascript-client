@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property factBox (base name: "factBox")', function() {
+      // uncomment below and update the code to test the property factBox
+      //var instance = new Lettera.Block();
+      //expect(instance).to.be();
+    });
+
     it('should have the property headline (base name: "headline")', function() {
       // uncomment below and update the code to test the property headline
       //var instance = new Lettera.Block();
