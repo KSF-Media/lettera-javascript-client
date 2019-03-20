@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Alignment', 'model/Article', 'model/Author', 'model/Block', 'model/BlockShortcodeError', 'model/FactInfo', 'model/ImageInfo', 'model/ListArticle', 'api/ArticlesApi', 'api/ListsApi'], factory);
+    define(['ApiClient', 'model/Alignment', 'model/Article', 'model/Author', 'model/Block', 'model/BlockShortcodeError', 'model/FactInfo', 'model/ImageInfo', 'api/ArticlesApi', 'api/ListsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Alignment'), require('./model/Article'), require('./model/Author'), require('./model/Block'), require('./model/BlockShortcodeError'), require('./model/FactInfo'), require('./model/ImageInfo'), require('./model/ListArticle'), require('./api/ArticlesApi'), require('./api/ListsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Alignment'), require('./model/Article'), require('./model/Author'), require('./model/Block'), require('./model/BlockShortcodeError'), require('./model/FactInfo'), require('./model/ImageInfo'), require('./api/ArticlesApi'), require('./api/ListsApi'));
   }
-}(function(ApiClient, Alignment, Article, Author, Block, BlockShortcodeError, FactInfo, ImageInfo, ListArticle, ArticlesApi, ListsApi) {
+}(function(ApiClient, Alignment, Article, Author, Block, BlockShortcodeError, FactInfo, ImageInfo, ArticlesApi, ListsApi) {
   'use strict';
 
   /**
@@ -96,11 +96,6 @@
      * @property {module:model/ImageInfo}
      */
     ImageInfo: ImageInfo,
-    /**
-     * The ListArticle model constructor.
-     * @property {module:model/ListArticle}
-     */
-    ListArticle: ListArticle,
     /**
      * The ArticlesApi service constructor.
      * @property {module:api/ArticlesApi}
