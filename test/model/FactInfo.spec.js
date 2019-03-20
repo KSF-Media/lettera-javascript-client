@@ -56,14 +56,14 @@
       //expect(instance).to.be.a(Lettera.FactInfo);
     });
 
-    it('should have the property factTitle (base name: "factTitle")', function() {
-      // uncomment below and update the code to test the property factTitle
+    it('should have the property title (base name: "title")', function() {
+      // uncomment below and update the code to test the property title
       //var instance = new Lettera.FactInfo();
       //expect(instance).to.be();
     });
 
-    it('should have the property factContent (base name: "factContent")', function() {
-      // uncomment below and update the code to test the property factContent
+    it('should have the property content (base name: "content")', function() {
+      // uncomment below and update the code to test the property content
       //var instance = new Lettera.FactInfo();
       //expect(instance).to.be();
     });

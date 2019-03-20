@@ -42,14 +42,14 @@
    * Constructs a new <code>FactInfo</code>.
    * @alias module:model/FactInfo
    * @class
-   * @param factTitle {String} 
-   * @param factContent {Array.<String>} 
+   * @param title {String} 
+   * @param content {Array.<String>} 
    */
-  var exports = function(factTitle, factContent) {
+  var exports = function(title, content) {
     var _this = this;
 
-    _this['factTitle'] = factTitle;
-    _this['factContent'] = factContent;
+    _this['title'] = title;
+    _this['content'] = content;
   };
 
   /**
@@ -62,24 +62,24 @@
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('factTitle')) {
-        obj['factTitle'] = ApiClient.convertToType(data['factTitle'], 'String');
+      if (data.hasOwnProperty('title')) {
+        obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
-      if (data.hasOwnProperty('factContent')) {
-        obj['factContent'] = ApiClient.convertToType(data['factContent'], ['String']);
+      if (data.hasOwnProperty('content')) {
+        obj['content'] = ApiClient.convertToType(data['content'], ['String']);
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} factTitle
+   * @member {String} title
    */
-  exports.prototype['factTitle'] = undefined;
+  exports.prototype['title'] = undefined;
   /**
-   * @member {Array.<String>} factContent
+   * @member {Array.<String>} content
    */
-  exports.prototype['factContent'] = undefined;
+  exports.prototype['content'] = undefined;
 
 
 

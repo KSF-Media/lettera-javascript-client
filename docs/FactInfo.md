@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**factTitle** | **String** |  | 
-**factContent** | **[String]** |  | 
+**title** | **String** |  | 
+**content** | **[String]** |  | 
 
 
