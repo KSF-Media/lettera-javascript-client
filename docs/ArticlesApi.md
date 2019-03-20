@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="articleUuidGet"></a>
 # **articleUuidGet**
-> Article articleUuidGet(uuid)
+> Article articleUuidGet(uuid, opts)
 
 
 
@@ -19,6 +19,9 @@ var Lettera = require('lettera');
 
 var apiInstance = new Lettera.ArticlesApi();
 var uuid = null; // String | 
+var opts = {
+  'authorization': "authorization_example" // String | 
+};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -26,7 +29,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.articleUuidGet(uuid, callback);
+apiInstance.articleUuidGet(uuid, opts, callback);
 ```
 
 ### Parameters
@@ -34,6 +37,7 @@ apiInstance.articleUuidGet(uuid, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **authorization** | **String**|  | [optional] 
 
 ### Return type
 

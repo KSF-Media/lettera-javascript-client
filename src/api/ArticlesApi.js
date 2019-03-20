@@ -57,10 +57,13 @@
 
     /**
      * @param {String} uuid 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.authorization 
      * @param {module:api/ArticlesApi~articleUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Article}
      */
-    this.articleUuidGet = function(uuid, callback) {
+    this.articleUuidGet = function(uuid, opts, callback) {
+      opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'uuid' is set
@@ -77,6 +80,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'Authorization': opts['authorization']
       };
       var formParams = {
       };

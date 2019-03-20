@@ -97,6 +97,9 @@ var Lettera = require('lettera');
 
 var api = new Lettera.ArticlesApi()
 var uuid = null; // {String} 
+var opts = {
+  'authorization': "authorization_example" // {String} 
+};
 
 var callback = function(error, data, response) {
   if (error) {
@@ -105,7 +108,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.articleUuidGet(uuid, callback);
+api.articleUuidGet(uuid, opts, callback);
 
 ```
 
