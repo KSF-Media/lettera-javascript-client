@@ -102,6 +102,9 @@
       if (data.hasOwnProperty('externalScripts')) {
         obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
       }
+      if (data.hasOwnProperty('relatedArticles')) {
+        obj['relatedArticles'] = ApiClient.convertToType(data['relatedArticles'], ['String']);
+      }
     }
     return obj;
   }
@@ -146,6 +149,10 @@
    * @member {Array.<String>} externalScripts
    */
   exports.prototype['externalScripts'] = undefined;
+  /**
+   * @member {Array.<String>} relatedArticles
+   */
+  exports.prototype['relatedArticles'] = undefined;
 
 
 

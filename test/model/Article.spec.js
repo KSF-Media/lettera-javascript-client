@@ -116,6 +116,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property relatedArticles (base name: "relatedArticles")', function() {
+      // uncomment below and update the code to test the property relatedArticles
+      //var instance = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

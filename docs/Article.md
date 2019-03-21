@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **premium** | **Boolean** |  | 
 **publishingTime** | **String** |  | 
 **externalScripts** | **[String]** |  | [optional] 
+**relatedArticles** | **[String]** |  | [optional] 
 
 
