@@ -98,6 +98,7 @@ var Lettera = require('lettera');
 var api = new Lettera.ArticlesApi()
 var uuid = null; // {String} 
 var opts = {
+  'authUser': null, // {String} 
   'authorization': "authorization_example" // {String} 
 };
 

@@ -58,6 +58,7 @@
     /**
      * @param {String} uuid 
      * @param {Object} opts Optional parameters
+     * @param {String} opts.authUser 
      * @param {String} opts.authorization 
      * @param {module:api/ArticlesApi~articleUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Article}
@@ -80,6 +81,7 @@
       var collectionQueryParams = {
       };
       var headerParams = {
+        'AuthUser': opts['authUser'],
         'Authorization': opts['authorization']
       };
       var formParams = {

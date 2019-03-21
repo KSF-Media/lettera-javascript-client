@@ -20,6 +20,7 @@ var Lettera = require('lettera');
 var apiInstance = new Lettera.ArticlesApi();
 var uuid = null; // String | 
 var opts = {
+  'authUser': null, // String | 
   'authorization': "authorization_example" // String | 
 };
 var callback = function(error, data, response) {
@@ -37,6 +38,7 @@ apiInstance.articleUuidGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
+ **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
 
 ### Return type
