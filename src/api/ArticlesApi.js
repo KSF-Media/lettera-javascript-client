@@ -48,6 +48,50 @@
 
 
     /**
+     * Callback function to receive the result of the articleSearchGet operation.
+     * @callback module:api/ArticlesApi~articleSearchGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Search article by content. It&#39;s a freetext search, so the &#x60;contentQuery&#x60; may be whatever string or sentence to search for.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.contentQuery 
+     * @param {module:api/ArticlesApi~articleSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Article>}
+     */
+    this.articleSearchGet = function(opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'contentQuery': opts['contentQuery'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [Article];
+
+      return this.apiClient.callApi(
+        '/article/search', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the articleUuidGet operation.
      * @callback module:api/ArticlesApi~articleUuidGetCallback
      * @param {String} error Error message, if any.

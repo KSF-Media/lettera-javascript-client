@@ -4,8 +4,54 @@ All URIs are relative to *http://http:/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**articleSearchGet**](ArticlesApi.md#articleSearchGet) | **GET** /article/search | 
 [**articleUuidGet**](ArticlesApi.md#articleUuidGet) | **GET** /article/{uuid} | 
 
+
+<a name="articleSearchGet"></a>
+# **articleSearchGet**
+> [Article] articleSearchGet(opts)
+
+
+
+Search article by content. It&#39;s a freetext search, so the &#x60;contentQuery&#x60; may be whatever string or sentence to search for.
+
+### Example
+```javascript
+var Lettera = require('lettera');
+
+var apiInstance = new Lettera.ArticlesApi();
+var opts = {
+  'contentQuery': "contentQuery_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.articleSearchGet(opts, callback);
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **contentQuery** | **String**|  | [optional] 
+
+### Return type
+
+[**[Article]**](Article.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json;charset=utf-8
 
 <a name="articleUuidGet"></a>
 # **articleUuidGet**

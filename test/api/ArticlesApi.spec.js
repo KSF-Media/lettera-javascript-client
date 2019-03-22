@@ -50,6 +50,16 @@
   }
 
   describe('ArticlesApi', function() {
+    describe('articleSearchGet', function() {
+      it('should call articleSearchGet successfully', function(done) {
+        //uncomment below and update the code to test articleSearchGet
+        //instance.articleSearchGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('articleUuidGet', function() {
       it('should call articleUuidGet successfully', function(done) {
         //uncomment below and update the code to test articleUuidGet
