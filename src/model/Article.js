@@ -99,6 +99,9 @@
       if (data.hasOwnProperty('publishingTime')) {
         obj['publishingTime'] = ApiClient.convertToType(data['publishingTime'], 'String');
       }
+      if (data.hasOwnProperty('updateTime')) {
+        obj['updateTime'] = ApiClient.convertToType(data['updateTime'], 'String');
+      }
       if (data.hasOwnProperty('externalScripts')) {
         obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
       }
@@ -145,6 +148,10 @@
    * @member {String} publishingTime
    */
   exports.prototype['publishingTime'] = undefined;
+  /**
+   * @member {String} updateTime
+   */
+  exports.prototype['updateTime'] = undefined;
   /**
    * @member {Array.<String>} externalScripts
    */
