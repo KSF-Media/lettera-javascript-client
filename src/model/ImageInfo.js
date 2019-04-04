@@ -74,6 +74,9 @@
       if (data.hasOwnProperty('alignment')) {
         obj['alignment'] = Alignment.constructFromObject(data['alignment']);
       }
+      if (data.hasOwnProperty('byline')) {
+        obj['byline'] = ApiClient.convertToType(data['byline'], 'String');
+      }
     }
     return obj;
   }
@@ -94,6 +97,10 @@
    * @member {module:model/Alignment} alignment
    */
   exports.prototype['alignment'] = undefined;
+  /**
+   * @member {String} byline
+   */
+  exports.prototype['byline'] = undefined;
 
 
 

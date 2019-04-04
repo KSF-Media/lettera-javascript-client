@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property byline (base name: "byline")', function() {
+      // uncomment below and update the code to test the property byline
+      //var instance = new Lettera.ImageInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
