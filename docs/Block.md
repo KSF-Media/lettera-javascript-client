@@ -1,6 +1,7 @@
 # Lettera.Block
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **paragraph** | **String** |  | [optional] 
