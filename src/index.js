@@ -15,7 +15,6 @@
 import ApiClient from './ApiClient';
 import Alignment from './model/Alignment';
 import Article from './model/Article';
-import Author from './model/Author';
 import Block from './model/Block';
 import BlockShortcodeError from './model/BlockShortcodeError';
 import FactInfo from './model/FactInfo';
@@ -73,12 +72,6 @@ export {
      * @property {module:model/Article}
      */
     Article,
-
-    /**
-     * The Author model constructor.
-     * @property {module:model/Author}
-     */
-    Author,
 
     /**
      * The Block model constructor.

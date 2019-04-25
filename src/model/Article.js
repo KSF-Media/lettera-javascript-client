@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Author from './Author';
 import Block from './Block';
 import ImageInfo from './ImageInfo';
 
@@ -27,15 +26,14 @@ class Article {
      * @alias module:model/Article
      * @param uuid {String} 
      * @param title {String} 
-     * @param author {module:model/Author} 
      * @param tags {Array.<String>} 
      * @param body {Array.<module:model/Block>} 
      * @param premium {Boolean} 
      * @param publishingTime {String} 
      */
-    constructor(uuid, title, author, tags, body, premium, publishingTime) { 
+    constructor(uuid, title, tags, body, premium, publishingTime) { 
         
-        Article.initialize(this, uuid, title, author, tags, body, premium, publishingTime);
+        Article.initialize(this, uuid, title, tags, body, premium, publishingTime);
     }
 
     /**
@@ -43,10 +41,9 @@ class Article {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, author, tags, body, premium, publishingTime) { 
+    static initialize(obj, uuid, title, tags, body, premium, publishingTime) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
-        obj['author'] = author;
         obj['tags'] = tags;
         obj['body'] = body;
         obj['premium'] = premium;
@@ -70,8 +67,8 @@ class Article {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
-            if (data.hasOwnProperty('author')) {
-                obj['author'] = Author.constructFromObject(data['author']);
+            if (data.hasOwnProperty('authorByline')) {
+                obj['authorByline'] = ApiClient.convertToType(data['authorByline'], 'String');
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
@@ -118,9 +115,9 @@ Article.prototype['uuid'] = undefined;
 Article.prototype['title'] = undefined;
 
 /**
- * @member {module:model/Author} author
+ * @member {String} authorByline
  */
-Article.prototype['author'] = undefined;
+Article.prototype['authorByline'] = undefined;
 
 /**
  * @member {Array.<String>} tags
