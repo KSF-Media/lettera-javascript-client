@@ -67,8 +67,8 @@ class Article {
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
-            if (data.hasOwnProperty('authorByline')) {
-                obj['authorByline'] = ApiClient.convertToType(data['authorByline'], 'String');
+            if (data.hasOwnProperty('authorBylines')) {
+                obj['authorBylines'] = ApiClient.convertToType(data['authorBylines'], ['String']);
             }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
@@ -115,9 +115,9 @@ Article.prototype['uuid'] = undefined;
 Article.prototype['title'] = undefined;
 
 /**
- * @member {String} authorByline
+ * @member {Array.<String>} authorBylines
  */
-Article.prototype['authorByline'] = undefined;
+Article.prototype['authorBylines'] = undefined;
 
 /**
  * @member {Array.<String>} tags
