@@ -22,6 +22,38 @@ Then install it via:
 npm install lettera --save
 ```
 
+Finaly, you need to build the module:
+
+```shell
+npm run build
+```
+
+##### Local development
+
+To use the library locally without publishing to a remote npm registry, first install the dependencies by changing into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
+
+```shell
+npm install
+```
+
+Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the following, also from `JAVASCRIPT_CLIENT_DIR`:
+
+```shell
+npm link
+```
+
+To use the link you just defined in your project, switch to the directory you want to use your lettera from, and run:
+
+```shell
+npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
+```
+
+Finaly, you need to build the module:
+
+```shell
+npm run build
+```
+
 #### git
 
 If the library is hosted at a git repository, e.g.https://github.com/KSF-Media/lettera-javascript-client
@@ -92,7 +124,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Lettera.ArticlesApi* | [**articleSearchGet**](docs/ArticlesApi.md#articleSearchGet) | **GET** /article/search | 
 *Lettera.ArticlesApi* | [**articleUuidGet**](docs/ArticlesApi.md#articleUuidGet) | **GET** /article/{uuid} | 
-*Lettera.ListsApi* | [**listGet**](docs/ListsApi.md#listGet) | **GET** /list | 
+*Lettera.ListsApi* | [**frontpageGet**](docs/ListsApi.md#frontpageGet) | **GET** /frontpage | Returns a list for a front page
+*Lettera.ListsApi* | [**latestGet**](docs/ListsApi.md#latestGet) | **GET** /latest | Returns a list of latest articles
 
 
 ## Documentation for Models

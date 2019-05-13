@@ -48,10 +48,20 @@
   }
 
   describe('ListsApi', function() {
-    describe('listGet', function() {
-      it('should call listGet successfully', function(done) {
-        //uncomment below and update the code to test listGet
-        //instance.listGet(function(error) {
+    describe('frontpageGet', function() {
+      it('should call frontpageGet successfully', function(done) {
+        //uncomment below and update the code to test frontpageGet
+        //instance.frontpageGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('latestGet', function() {
+      it('should call latestGet successfully', function(done) {
+        //uncomment below and update the code to test latestGet
+        //instance.latestGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

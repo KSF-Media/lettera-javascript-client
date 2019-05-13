@@ -35,18 +35,19 @@ export default class ListsApi {
 
 
     /**
-     * Callback function to receive the result of the listGet operation.
-     * @callback module:api/ListsApi~listGetCallback
+     * Callback function to receive the result of the frontpageGet operation.
+     * @callback module:api/ListsApi~frontpageGetCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/Article>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * @param {module:api/ListsApi~listGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * Returns a list for a front page
+     * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
      */
-    listGet(callback) {
+    frontpageGet(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -63,7 +64,43 @@ export default class ListsApi {
       let accepts = ['application/json;charset=utf-8'];
       let returnType = [Article];
       return this.apiClient.callApi(
-        '/list', 'GET',
+        '/frontpage', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the latestGet operation.
+     * @callback module:api/ListsApi~latestGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns a list of latest articles
+     * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Article>}
+     */
+    latestGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json;charset=utf-8'];
+      let returnType = [Article];
+      return this.apiClient.callApi(
+        '/latest', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
