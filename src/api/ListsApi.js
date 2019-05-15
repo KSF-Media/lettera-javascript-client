@@ -106,5 +106,41 @@ export default class ListsApi {
       );
     }
 
+    /**
+     * Callback function to receive the result of the mostreadGet operation.
+     * @callback module:api/ListsApi~mostreadGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns a list of most read articles
+     * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/Article>}
+     */
+    mostreadGet(callback) {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json;charset=utf-8'];
+      let returnType = [Article];
+      return this.apiClient.callApi(
+        '/mostread', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
 
 }

@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('mostreadGet', function() {
+      it('should call mostreadGet successfully', function(done) {
+        //uncomment below and update the code to test mostreadGet
+        //instance.mostreadGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

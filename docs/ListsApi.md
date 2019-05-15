@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**frontpageGet**](ListsApi.md#frontpageGet) | **GET** /frontpage | Returns a list for a front page
 [**latestGet**](ListsApi.md#latestGet) | **GET** /latest | Returns a list of latest articles
+[**mostreadGet**](ListsApi.md#mostreadGet) | **GET** /mostread | Returns a list of most read articles
 
 
 
@@ -61,6 +62,45 @@ import Lettera from 'lettera';
 
 let apiInstance = new Lettera.ListsApi();
 apiInstance.latestGet((error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**[Article]**](Article.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+
+## mostreadGet
+
+> [Article] mostreadGet()
+
+Returns a list of most read articles
+
+### Example
+
+```javascript
+import Lettera from 'lettera';
+
+let apiInstance = new Lettera.ListsApi();
+apiInstance.mostreadGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
