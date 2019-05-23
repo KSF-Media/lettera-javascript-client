@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **infogramEmbed** | **[Object]** |  | [optional] 
 **twitterEmbed** | **String** |  | [optional] 
 **facebookEmbed** | **String** |  | [optional] 
+**quote** | **String** |  | [optional] 
 
 
