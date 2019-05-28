@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **premium** | **Boolean** |  | 
 **publishingTime** | **String** |  | 
 **updateTime** | **String** |  | [optional] 
+**articleType** | [**ArticleType**](ArticleType.md) |  | 
 **externalScripts** | **[String]** |  | [optional] 
 **relatedArticles** | **[String]** |  | [optional] 
 

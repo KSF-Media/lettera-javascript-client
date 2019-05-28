@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ArticleType from './ArticleType';
 import Block from './Block';
 import ImageInfo from './ImageInfo';
 
@@ -30,10 +31,11 @@ class Article {
      * @param body {Array.<module:model/Block>} 
      * @param premium {Boolean} 
      * @param publishingTime {String} 
+     * @param articleType {module:model/ArticleType} 
      */
-    constructor(uuid, title, tags, body, premium, publishingTime) { 
+    constructor(uuid, title, tags, body, premium, publishingTime, articleType) { 
         
-        Article.initialize(this, uuid, title, tags, body, premium, publishingTime);
+        Article.initialize(this, uuid, title, tags, body, premium, publishingTime, articleType);
     }
 
     /**
@@ -41,13 +43,14 @@ class Article {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, tags, body, premium, publishingTime) { 
+    static initialize(obj, uuid, title, tags, body, premium, publishingTime, articleType) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['tags'] = tags;
         obj['body'] = body;
         obj['premium'] = premium;
         obj['publishingTime'] = publishingTime;
+        obj['articleType'] = articleType;
     }
 
     /**
@@ -90,6 +93,9 @@ class Article {
             }
             if (data.hasOwnProperty('updateTime')) {
                 obj['updateTime'] = ApiClient.convertToType(data['updateTime'], 'String');
+            }
+            if (data.hasOwnProperty('articleType')) {
+                obj['articleType'] = ArticleType.constructFromObject(data['articleType']);
             }
             if (data.hasOwnProperty('externalScripts')) {
                 obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
@@ -153,6 +159,11 @@ Article.prototype['publishingTime'] = undefined;
  * @member {String} updateTime
  */
 Article.prototype['updateTime'] = undefined;
+
+/**
+ * @member {module:model/ArticleType} articleType
+ */
+Article.prototype['articleType'] = undefined;
 
 /**
  * @member {Array.<String>} externalScripts
