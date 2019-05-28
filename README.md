@@ -134,6 +134,7 @@ Class | Method | HTTP request | Description
  - [Lettera.Alignment](docs/Alignment.md)
  - [Lettera.Article](docs/Article.md)
  - [Lettera.ArticleType](docs/ArticleType.md)
+ - [Lettera.Author](docs/Author.md)
  - [Lettera.Block](docs/Block.md)
  - [Lettera.BlockShortcodeError](docs/BlockShortcodeError.md)
  - [Lettera.FactInfo](docs/FactInfo.md)

@@ -66,8 +66,8 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property authorBylines (base name: "authorBylines")', function() {
-      // uncomment below and update the code to test the property authorBylines
+    it('should have the property authors (base name: "authors")', function() {
+      // uncomment below and update the code to test the property authors
       //var instane = new Lettera.Article();
       //expect(instance).to.be();
     });

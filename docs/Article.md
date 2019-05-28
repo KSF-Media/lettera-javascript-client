@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **String** |  | 
 **title** | **String** |  | 
-**authorBylines** | **[String]** |  | [optional] 
+**authors** | [**[Author]**](Author.md) |  | 
 **tags** | **[String]** |  | 
 **preamble** | **String** |  | [optional] 
 **mainImage** | [**ImageInfo**](ImageInfo.md) |  | [optional] 
