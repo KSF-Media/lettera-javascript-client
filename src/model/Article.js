@@ -85,6 +85,9 @@ class Article {
             if (data.hasOwnProperty('mainImage')) {
                 obj['mainImage'] = ImageInfo.constructFromObject(data['mainImage']);
             }
+            if (data.hasOwnProperty('listImage')) {
+                obj['listImage'] = ImageInfo.constructFromObject(data['listImage']);
+            }
             if (data.hasOwnProperty('body')) {
                 obj['body'] = ApiClient.convertToType(data['body'], [Block]);
             }
@@ -142,6 +145,11 @@ Article.prototype['preamble'] = undefined;
  * @member {module:model/ImageInfo} mainImage
  */
 Article.prototype['mainImage'] = undefined;
+
+/**
+ * @member {module:model/ImageInfo} listImage
+ */
+Article.prototype['listImage'] = undefined;
 
 /**
  * @member {Array.<module:model/Block>} body

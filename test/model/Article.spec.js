@@ -90,6 +90,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property listImage (base name: "listImage")', function() {
+      // uncomment below and update the code to test the property listImage
+      //var instane = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
     it('should have the property body (base name: "body")', function() {
       // uncomment below and update the code to test the property body
       //var instane = new Lettera.Article();

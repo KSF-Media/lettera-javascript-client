@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **tags** | **[String]** |  | 
 **preamble** | **String** |  | [optional] 
 **mainImage** | [**ImageInfo**](ImageInfo.md) |  | [optional] 
+**listImage** | [**ImageInfo**](ImageInfo.md) |  | [optional] 
 **body** | [**[Block]**](Block.md) |  | 
 **premium** | **Boolean** |  | 
 **publishingTime** | **String** |  | 
