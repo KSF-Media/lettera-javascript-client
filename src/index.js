@@ -23,6 +23,7 @@ import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
 import ArticlesApi from './api/ArticlesApi';
 import ListsApi from './api/ListsApi';
+import NotifiersApi from './api/NotifiersApi';
 
 
 /**
@@ -121,5 +122,11 @@ export {
     * The ListsApi service constructor.
     * @property {module:api/ListsApi}
     */
-    ListsApi
+    ListsApi,
+
+    /**
+    * The NotifiersApi service constructor.
+    * @property {module:api/NotifiersApi}
+    */
+    NotifiersApi
 };
