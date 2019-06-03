@@ -44,15 +44,19 @@ export default class ListsApi {
 
     /**
      * Returns a list for a front page
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.category 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
      */
-    frontpageGet(callback) {
+    frontpageGet(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'category': opts['category']
       };
       let headerParams = {
       };

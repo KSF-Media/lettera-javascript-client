@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## frontpageGet
 
-> [Article] frontpageGet()
+> [Article] frontpageGet(opts)
 
 Returns a list for a front page
 
@@ -22,7 +22,10 @@ Returns a list for a front page
 import Lettera from 'lettera';
 
 let apiInstance = new Lettera.ListsApi();
-apiInstance.frontpageGet((error, data, response) => {
+let opts = {
+  'category': "category_example" // String | 
+};
+apiInstance.frontpageGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -33,7 +36,10 @@ apiInstance.frontpageGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **category** | **String**|  | [optional] 
 
 ### Return type
 
