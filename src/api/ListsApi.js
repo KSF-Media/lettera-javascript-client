@@ -45,6 +45,8 @@ export default class ListsApi {
     /**
      * Returns a list for a front page
      * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
      * @param {String} opts.category 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
@@ -56,6 +58,8 @@ export default class ListsApi {
       let pathParams = {
       };
       let queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
         'category': opts['category']
       };
       let headerParams = {
@@ -84,15 +88,21 @@ export default class ListsApi {
 
     /**
      * Returns a list of latest articles
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
      */
-    latestGet(callback) {
+    latestGet(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit']
       };
       let headerParams = {
       };
@@ -120,15 +130,21 @@ export default class ListsApi {
 
     /**
      * Returns a list of most read articles
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
      */
-    mostreadGet(callback) {
+    mostreadGet(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit']
       };
       let headerParams = {
       };

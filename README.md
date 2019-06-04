@@ -103,6 +103,8 @@ var Lettera = require('lettera');
 
 var api = new Lettera.ArticlesApi()
 var opts = {
+  'start': 56, // {Number} 
+  'limit': 56, // {Number} 
   'contentQuery': "contentQuery_example" // {String} 
 };
 var callback = function(error, data, response) {

@@ -45,6 +45,8 @@ export default class ArticlesApi {
     /**
      * Search article by content. It's a freetext search, so the `contentQuery` may be whatever string or sentence to search for.
      * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
      * @param {String} opts.contentQuery 
      * @param {module:api/ArticlesApi~articleSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
@@ -56,6 +58,8 @@ export default class ArticlesApi {
       let pathParams = {
       };
       let queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
         'contentQuery': opts['contentQuery']
       };
       let headerParams = {

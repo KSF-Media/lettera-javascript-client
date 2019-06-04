@@ -23,6 +23,8 @@ import Lettera from 'lettera';
 
 let apiInstance = new Lettera.ListsApi();
 let opts = {
+  'start': 56, // Number | 
+  'limit': 56, // Number | 
   'category': "category_example" // String | 
 };
 apiInstance.frontpageGet(opts, (error, data, response) => {
@@ -39,6 +41,8 @@ apiInstance.frontpageGet(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **start** | **Number**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
  **category** | **String**|  | [optional] 
 
 ### Return type
@@ -57,7 +61,7 @@ No authorization required
 
 ## latestGet
 
-> [Article] latestGet()
+> [Article] latestGet(opts)
 
 Returns a list of latest articles
 
@@ -67,7 +71,11 @@ Returns a list of latest articles
 import Lettera from 'lettera';
 
 let apiInstance = new Lettera.ListsApi();
-apiInstance.latestGet((error, data, response) => {
+let opts = {
+  'start': 56, // Number | 
+  'limit': 56 // Number | 
+};
+apiInstance.latestGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -78,7 +86,11 @@ apiInstance.latestGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start** | **Number**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
 
 ### Return type
 
@@ -96,7 +108,7 @@ No authorization required
 
 ## mostreadGet
 
-> [Article] mostreadGet()
+> [Article] mostreadGet(opts)
 
 Returns a list of most read articles
 
@@ -106,7 +118,11 @@ Returns a list of most read articles
 import Lettera from 'lettera';
 
 let apiInstance = new Lettera.ListsApi();
-apiInstance.mostreadGet((error, data, response) => {
+let opts = {
+  'start': 56, // Number | 
+  'limit': 56 // Number | 
+};
+apiInstance.mostreadGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -117,7 +133,11 @@ apiInstance.mostreadGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start** | **Number**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
 
 ### Return type
 
