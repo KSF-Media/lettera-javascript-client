@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **updateTime** | **String** |  | [optional] 
 **articleType** | [**ArticleType**](ArticleType.md) |  | 
 **externalScripts** | **[String]** |  | [optional] 
-**relatedArticles** | **[String]** |  | [optional] 
+**relatedArticles** | [**[RelatedArticle]**](RelatedArticle.md) |  | 
 
 

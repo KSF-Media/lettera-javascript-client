@@ -21,6 +21,7 @@ import Block from './model/Block';
 import BlockShortcodeError from './model/BlockShortcodeError';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
+import RelatedArticle from './model/RelatedArticle';
 import ArticlesApi from './api/ArticlesApi';
 import ListsApi from './api/ListsApi';
 import NotifiersApi from './api/NotifiersApi';
@@ -111,6 +112,12 @@ export {
      * @property {module:model/ImageInfo}
      */
     ImageInfo,
+
+    /**
+     * The RelatedArticle model constructor.
+     * @property {module:model/RelatedArticle}
+     */
+    RelatedArticle,
 
     /**
     * The ArticlesApi service constructor.

@@ -140,6 +140,7 @@ Class | Method | HTTP request | Description
  - [Lettera.BlockShortcodeError](docs/BlockShortcodeError.md)
  - [Lettera.FactInfo](docs/FactInfo.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
+ - [Lettera.RelatedArticle](docs/RelatedArticle.md)
 
 
 ## Documentation for Authorization

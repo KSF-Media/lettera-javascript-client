@@ -16,6 +16,7 @@ import ArticleType from './ArticleType';
 import Author from './Author';
 import Block from './Block';
 import ImageInfo from './ImageInfo';
+import RelatedArticle from './RelatedArticle';
 
 /**
  * The Article model module.
@@ -34,10 +35,11 @@ class Article {
      * @param premium {Boolean} 
      * @param publishingTime {String} 
      * @param articleType {module:model/ArticleType} 
+     * @param relatedArticles {Array.<module:model/RelatedArticle>} 
      */
-    constructor(uuid, title, authors, tags, body, premium, publishingTime, articleType) { 
+    constructor(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
         
-        Article.initialize(this, uuid, title, authors, tags, body, premium, publishingTime, articleType);
+        Article.initialize(this, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles);
     }
 
     /**
@@ -45,7 +47,7 @@ class Article {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, authors, tags, body, premium, publishingTime, articleType) { 
+    static initialize(obj, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['authors'] = authors;
@@ -54,6 +56,7 @@ class Article {
         obj['premium'] = premium;
         obj['publishingTime'] = publishingTime;
         obj['articleType'] = articleType;
+        obj['relatedArticles'] = relatedArticles;
     }
 
     /**
@@ -107,7 +110,7 @@ class Article {
                 obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
             }
             if (data.hasOwnProperty('relatedArticles')) {
-                obj['relatedArticles'] = ApiClient.convertToType(data['relatedArticles'], ['String']);
+                obj['relatedArticles'] = ApiClient.convertToType(data['relatedArticles'], [RelatedArticle]);
             }
         }
         return obj;
@@ -182,7 +185,7 @@ Article.prototype['articleType'] = undefined;
 Article.prototype['externalScripts'] = undefined;
 
 /**
- * @member {Array.<String>} relatedArticles
+ * @member {Array.<module:model/RelatedArticle>} relatedArticles
  */
 Article.prototype['relatedArticles'] = undefined;
 
