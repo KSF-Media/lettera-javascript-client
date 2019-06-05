@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *Lettera.ArticlesApi* | [**articleSearchGet**](docs/ArticlesApi.md#articleSearchGet) | **GET** /article/search | 
 *Lettera.ArticlesApi* | [**articleUuidGet**](docs/ArticlesApi.md#articleUuidGet) | **GET** /article/{uuid} | 
+*Lettera.CategoriesApi* | [**categoriesGet**](docs/CategoriesApi.md#categoriesGet) | **GET** /categories | Read categories
 *Lettera.ListsApi* | [**frontpageGet**](docs/ListsApi.md#frontpageGet) | **GET** /frontpage | Returns a list for a front page
 *Lettera.ListsApi* | [**latestGet**](docs/ListsApi.md#latestGet) | **GET** /latest | Returns a list of latest articles
 *Lettera.ListsApi* | [**mostreadGet**](docs/ListsApi.md#mostreadGet) | **GET** /mostread | Returns a list of most read articles
@@ -140,6 +141,8 @@ Class | Method | HTTP request | Description
  - [Lettera.Author](docs/Author.md)
  - [Lettera.Block](docs/Block.md)
  - [Lettera.BlockShortcodeError](docs/BlockShortcodeError.md)
+ - [Lettera.Category](docs/Category.md)
+ - [Lettera.CategoryHierarchy](docs/CategoryHierarchy.md)
  - [Lettera.FactInfo](docs/FactInfo.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
  - [Lettera.RelatedArticle](docs/RelatedArticle.md)

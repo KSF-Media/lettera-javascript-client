@@ -19,10 +19,13 @@ import ArticleType from './model/ArticleType';
 import Author from './model/Author';
 import Block from './model/Block';
 import BlockShortcodeError from './model/BlockShortcodeError';
+import Category from './model/Category';
+import CategoryHierarchy from './model/CategoryHierarchy';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
 import RelatedArticle from './model/RelatedArticle';
 import ArticlesApi from './api/ArticlesApi';
+import CategoriesApi from './api/CategoriesApi';
 import ListsApi from './api/ListsApi';
 import NotifiersApi from './api/NotifiersApi';
 
@@ -102,6 +105,18 @@ export {
     BlockShortcodeError,
 
     /**
+     * The Category model constructor.
+     * @property {module:model/Category}
+     */
+    Category,
+
+    /**
+     * The CategoryHierarchy model constructor.
+     * @property {module:model/CategoryHierarchy}
+     */
+    CategoryHierarchy,
+
+    /**
      * The FactInfo model constructor.
      * @property {module:model/FactInfo}
      */
@@ -124,6 +139,12 @@ export {
     * @property {module:api/ArticlesApi}
     */
     ArticlesApi,
+
+    /**
+    * The CategoriesApi service constructor.
+    * @property {module:api/CategoriesApi}
+    */
+    CategoriesApi,
 
     /**
     * The ListsApi service constructor.
