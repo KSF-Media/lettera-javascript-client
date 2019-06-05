@@ -27,10 +27,11 @@ class RelatedArticle {
      * @param title {String} 
      * @param publishingTime {String} 
      * @param premium {Boolean} 
+     * @param tags {Array.<String>} 
      */
-    constructor(uuid, title, publishingTime, premium) { 
+    constructor(uuid, title, publishingTime, premium, tags) { 
         
-        RelatedArticle.initialize(this, uuid, title, publishingTime, premium);
+        RelatedArticle.initialize(this, uuid, title, publishingTime, premium, tags);
     }
 
     /**
@@ -38,11 +39,12 @@ class RelatedArticle {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, publishingTime, premium) { 
+    static initialize(obj, uuid, title, publishingTime, premium, tags) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['publishingTime'] = publishingTime;
         obj['premium'] = premium;
+        obj['tags'] = tags;
     }
 
     /**
@@ -73,6 +75,9 @@ class RelatedArticle {
             }
             if (data.hasOwnProperty('premium')) {
                 obj['premium'] = ApiClient.convertToType(data['premium'], 'Boolean');
+            }
+            if (data.hasOwnProperty('tags')) {
+                obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
         }
         return obj;
@@ -110,6 +115,11 @@ RelatedArticle.prototype['publishingTime'] = undefined;
  * @member {Boolean} premium
  */
 RelatedArticle.prototype['premium'] = undefined;
+
+/**
+ * @member {Array.<String>} tags
+ */
+RelatedArticle.prototype['tags'] = undefined;
 
 
 
