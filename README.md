@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
  - [Lettera.CategoryHierarchy](docs/CategoryHierarchy.md)
  - [Lettera.FactInfo](docs/FactInfo.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
+ - [Lettera.ListArticle](docs/ListArticle.md)
  - [Lettera.RelatedArticle](docs/RelatedArticle.md)
 
 

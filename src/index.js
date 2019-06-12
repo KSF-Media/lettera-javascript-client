@@ -23,6 +23,7 @@ import Category from './model/Category';
 import CategoryHierarchy from './model/CategoryHierarchy';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
+import ListArticle from './model/ListArticle';
 import RelatedArticle from './model/RelatedArticle';
 import ArticlesApi from './api/ArticlesApi';
 import CategoriesApi from './api/CategoriesApi';
@@ -127,6 +128,12 @@ export {
      * @property {module:model/ImageInfo}
      */
     ImageInfo,
+
+    /**
+     * The ListArticle model constructor.
+     * @property {module:model/ListArticle}
+     */
+    ListArticle,
 
     /**
      * The RelatedArticle model constructor.

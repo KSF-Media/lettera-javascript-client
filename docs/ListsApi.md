@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## frontpageGet
 
-> [Article] frontpageGet(opts)
+> [ListArticle] frontpageGet(opts)
 
 Returns a list for a front page
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Article]**](Article.md)
+[**[ListArticle]**](ListArticle.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ No authorization required
 
 ## latestGet
 
-> [Article] latestGet(opts)
+> [ListArticle] latestGet(opts)
 
 Returns a list of latest articles
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Article]**](Article.md)
+[**[ListArticle]**](ListArticle.md)
 
 ### Authorization
 
@@ -108,7 +108,7 @@ No authorization required
 
 ## mostreadGet
 
-> [Article] mostreadGet(opts)
+> [ListArticle] mostreadGet(opts)
 
 Returns a list of most read articles
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Article]**](Article.md)
+[**[ListArticle]**](ListArticle.md)
 
 ### Authorization
 

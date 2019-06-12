@@ -13,7 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import Article from '../model/Article';
+import ListArticle from '../model/ListArticle';
 
 /**
 * Lists service.
@@ -38,7 +38,7 @@ export default class ListsApi {
      * Callback function to receive the result of the frontpageGet operation.
      * @callback module:api/ListsApi~frontpageGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {Array.<module:model/ListArticle>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,7 +49,7 @@ export default class ListsApi {
      * @param {Number} opts.limit 
      * @param {String} opts.category 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Article>}
+     * data is of type: {@link Array.<module:model/ListArticle>}
      */
     frontpageGet(opts, callback) {
       opts = opts || {};
@@ -70,7 +70,7 @@ export default class ListsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json;charset=utf-8'];
-      let returnType = [Article];
+      let returnType = [ListArticle];
       return this.apiClient.callApi(
         '/frontpage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -82,7 +82,7 @@ export default class ListsApi {
      * Callback function to receive the result of the latestGet operation.
      * @callback module:api/ListsApi~latestGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {Array.<module:model/ListArticle>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -92,7 +92,7 @@ export default class ListsApi {
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Article>}
+     * data is of type: {@link Array.<module:model/ListArticle>}
      */
     latestGet(opts, callback) {
       opts = opts || {};
@@ -112,7 +112,7 @@ export default class ListsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json;charset=utf-8'];
-      let returnType = [Article];
+      let returnType = [ListArticle];
       return this.apiClient.callApi(
         '/latest', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -124,7 +124,7 @@ export default class ListsApi {
      * Callback function to receive the result of the mostreadGet operation.
      * @callback module:api/ListsApi~mostreadGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Article>} data The data returned by the service call.
+     * @param {Array.<module:model/ListArticle>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -134,7 +134,7 @@ export default class ListsApi {
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Article>}
+     * data is of type: {@link Array.<module:model/ListArticle>}
      */
     mostreadGet(opts, callback) {
       opts = opts || {};
@@ -154,7 +154,7 @@ export default class ListsApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json;charset=utf-8'];
-      let returnType = [Article];
+      let returnType = [ListArticle];
       return this.apiClient.callApi(
         '/mostread', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

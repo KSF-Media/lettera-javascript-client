@@ -12,34 +12,30 @@
  */
 
 import ApiClient from '../ApiClient';
-import ArticleType from './ArticleType';
 import Author from './Author';
-import Block from './Block';
 import ImageInfo from './ImageInfo';
 import RelatedArticle from './RelatedArticle';
 
 /**
- * The Article model module.
- * @module model/Article
+ * The ListArticle model module.
+ * @module model/ListArticle
  * @version 1.0.0
  */
-class Article {
+class ListArticle {
     /**
-     * Constructs a new <code>Article</code>.
-     * @alias module:model/Article
+     * Constructs a new <code>ListArticle</code>.
+     * @alias module:model/ListArticle
      * @param uuid {String} 
      * @param title {String} 
      * @param authors {Array.<module:model/Author>} 
      * @param tags {Array.<String>} 
-     * @param body {Array.<module:model/Block>} 
      * @param premium {Boolean} 
      * @param publishingTime {String} 
-     * @param articleType {module:model/ArticleType} 
      * @param relatedArticles {Array.<module:model/RelatedArticle>} 
      */
-    constructor(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
+    constructor(uuid, title, authors, tags, premium, publishingTime, relatedArticles) { 
         
-        Article.initialize(this, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles);
+        ListArticle.initialize(this, uuid, title, authors, tags, premium, publishingTime, relatedArticles);
     }
 
     /**
@@ -47,28 +43,26 @@ class Article {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
+    static initialize(obj, uuid, title, authors, tags, premium, publishingTime, relatedArticles) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['authors'] = authors;
         obj['tags'] = tags;
-        obj['body'] = body;
         obj['premium'] = premium;
         obj['publishingTime'] = publishingTime;
-        obj['articleType'] = articleType;
         obj['relatedArticles'] = relatedArticles;
     }
 
     /**
-     * Constructs a <code>Article</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ListArticle</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Article} obj Optional instance to populate.
-     * @return {module:model/Article} The populated <code>Article</code> instance.
+     * @param {module:model/ListArticle} obj Optional instance to populate.
+     * @return {module:model/ListArticle} The populated <code>ListArticle</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Article();
+            obj = obj || new ListArticle();
 
             if (data.hasOwnProperty('uuid')) {
                 obj['uuid'] = ApiClient.convertToType(data['uuid'], 'String');
@@ -85,14 +79,8 @@ class Article {
             if (data.hasOwnProperty('preamble')) {
                 obj['preamble'] = ApiClient.convertToType(data['preamble'], 'String');
             }
-            if (data.hasOwnProperty('mainImage')) {
-                obj['mainImage'] = ImageInfo.constructFromObject(data['mainImage']);
-            }
             if (data.hasOwnProperty('listImage')) {
                 obj['listImage'] = ImageInfo.constructFromObject(data['listImage']);
-            }
-            if (data.hasOwnProperty('body')) {
-                obj['body'] = ApiClient.convertToType(data['body'], [Block]);
             }
             if (data.hasOwnProperty('premium')) {
                 obj['premium'] = ApiClient.convertToType(data['premium'], 'Boolean');
@@ -103,17 +91,8 @@ class Article {
             if (data.hasOwnProperty('updateTime')) {
                 obj['updateTime'] = ApiClient.convertToType(data['updateTime'], 'String');
             }
-            if (data.hasOwnProperty('articleType')) {
-                obj['articleType'] = ArticleType.constructFromObject(data['articleType']);
-            }
-            if (data.hasOwnProperty('externalScripts')) {
-                obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
-            }
             if (data.hasOwnProperty('relatedArticles')) {
                 obj['relatedArticles'] = ApiClient.convertToType(data['relatedArticles'], [RelatedArticle]);
-            }
-            if (data.hasOwnProperty('shareUrl')) {
-                obj['shareUrl'] = ApiClient.convertToType(data['shareUrl'], 'String');
             }
         }
         return obj;
@@ -125,82 +104,57 @@ class Article {
 /**
  * @member {String} uuid
  */
-Article.prototype['uuid'] = undefined;
+ListArticle.prototype['uuid'] = undefined;
 
 /**
  * @member {String} title
  */
-Article.prototype['title'] = undefined;
+ListArticle.prototype['title'] = undefined;
 
 /**
  * @member {Array.<module:model/Author>} authors
  */
-Article.prototype['authors'] = undefined;
+ListArticle.prototype['authors'] = undefined;
 
 /**
  * @member {Array.<String>} tags
  */
-Article.prototype['tags'] = undefined;
+ListArticle.prototype['tags'] = undefined;
 
 /**
  * @member {String} preamble
  */
-Article.prototype['preamble'] = undefined;
-
-/**
- * @member {module:model/ImageInfo} mainImage
- */
-Article.prototype['mainImage'] = undefined;
+ListArticle.prototype['preamble'] = undefined;
 
 /**
  * @member {module:model/ImageInfo} listImage
  */
-Article.prototype['listImage'] = undefined;
-
-/**
- * @member {Array.<module:model/Block>} body
- */
-Article.prototype['body'] = undefined;
+ListArticle.prototype['listImage'] = undefined;
 
 /**
  * @member {Boolean} premium
  */
-Article.prototype['premium'] = undefined;
+ListArticle.prototype['premium'] = undefined;
 
 /**
  * @member {String} publishingTime
  */
-Article.prototype['publishingTime'] = undefined;
+ListArticle.prototype['publishingTime'] = undefined;
 
 /**
  * @member {String} updateTime
  */
-Article.prototype['updateTime'] = undefined;
-
-/**
- * @member {module:model/ArticleType} articleType
- */
-Article.prototype['articleType'] = undefined;
-
-/**
- * @member {Array.<String>} externalScripts
- */
-Article.prototype['externalScripts'] = undefined;
+ListArticle.prototype['updateTime'] = undefined;
 
 /**
  * @member {Array.<module:model/RelatedArticle>} relatedArticles
  */
-Article.prototype['relatedArticles'] = undefined;
-
-/**
- * @member {String} shareUrl
- */
-Article.prototype['shareUrl'] = undefined;
+ListArticle.prototype['relatedArticles'] = undefined;
 
 
 
 
 
 
-export default Article;
+export default ListArticle;
 
