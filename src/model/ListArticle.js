@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ArticleType from './ArticleType';
 import Author from './Author';
 import ImageInfo from './ImageInfo';
 import RelatedArticle from './RelatedArticle';
@@ -32,10 +33,11 @@ class ListArticle {
      * @param premium {Boolean} 
      * @param publishingTime {String} 
      * @param relatedArticles {Array.<module:model/RelatedArticle>} 
+     * @param articleType {module:model/ArticleType} 
      */
-    constructor(uuid, title, authors, tags, premium, publishingTime, relatedArticles) { 
+    constructor(uuid, title, authors, tags, premium, publishingTime, relatedArticles, articleType) { 
         
-        ListArticle.initialize(this, uuid, title, authors, tags, premium, publishingTime, relatedArticles);
+        ListArticle.initialize(this, uuid, title, authors, tags, premium, publishingTime, relatedArticles, articleType);
     }
 
     /**
@@ -43,7 +45,7 @@ class ListArticle {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, authors, tags, premium, publishingTime, relatedArticles) { 
+    static initialize(obj, uuid, title, authors, tags, premium, publishingTime, relatedArticles, articleType) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['authors'] = authors;
@@ -51,6 +53,7 @@ class ListArticle {
         obj['premium'] = premium;
         obj['publishingTime'] = publishingTime;
         obj['relatedArticles'] = relatedArticles;
+        obj['articleType'] = articleType;
     }
 
     /**
@@ -93,6 +96,9 @@ class ListArticle {
             }
             if (data.hasOwnProperty('relatedArticles')) {
                 obj['relatedArticles'] = ApiClient.convertToType(data['relatedArticles'], [RelatedArticle]);
+            }
+            if (data.hasOwnProperty('articleType')) {
+                obj['articleType'] = ArticleType.constructFromObject(data['articleType']);
             }
         }
         return obj;
@@ -150,6 +156,11 @@ ListArticle.prototype['updateTime'] = undefined;
  * @member {Array.<module:model/RelatedArticle>} relatedArticles
  */
 ListArticle.prototype['relatedArticles'] = undefined;
+
+/**
+ * @member {module:model/ArticleType} articleType
+ */
+ListArticle.prototype['articleType'] = undefined;
 
 
 

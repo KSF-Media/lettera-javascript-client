@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **publishingTime** | **String** |  | 
 **updateTime** | **String** |  | [optional] 
 **relatedArticles** | [**[RelatedArticle]**](RelatedArticle.md) |  | 
+**articleType** | [**ArticleType**](ArticleType.md) |  | 
 
 
