@@ -54,14 +54,14 @@
       //expect(instance).to.be.a(Lettera.Author);
     });
 
-    it('should have the property authorByline (base name: "authorByline")', function() {
-      // uncomment below and update the code to test the property authorByline
+    it('should have the property byline (base name: "byline")', function() {
+      // uncomment below and update the code to test the property byline
       //var instane = new Lettera.Author();
       //expect(instance).to.be();
     });
 
-    it('should have the property authorImage (base name: "authorImage")', function() {
-      // uncomment below and update the code to test the property authorImage
+    it('should have the property image (base name: "image")', function() {
+      // uncomment below and update the code to test the property image
       //var instane = new Lettera.Author();
       //expect(instance).to.be();
     });

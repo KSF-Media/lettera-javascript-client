@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**authorByline** | **String** |  | 
-**authorImage** | **String** |  | [optional] 
+**byline** | **String** |  | 
+**image** | **String** |  | [optional] 
 
 

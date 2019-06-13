@@ -22,11 +22,11 @@ class Author {
     /**
      * Constructs a new <code>Author</code>.
      * @alias module:model/Author
-     * @param authorByline {String} 
+     * @param byline {String} 
      */
-    constructor(authorByline) { 
+    constructor(byline) { 
         
-        Author.initialize(this, authorByline);
+        Author.initialize(this, byline);
     }
 
     /**
@@ -34,8 +34,8 @@ class Author {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, authorByline) { 
-        obj['authorByline'] = authorByline;
+    static initialize(obj, byline) { 
+        obj['byline'] = byline;
     }
 
     /**
@@ -49,11 +49,11 @@ class Author {
         if (data) {
             obj = obj || new Author();
 
-            if (data.hasOwnProperty('authorByline')) {
-                obj['authorByline'] = ApiClient.convertToType(data['authorByline'], 'String');
+            if (data.hasOwnProperty('byline')) {
+                obj['byline'] = ApiClient.convertToType(data['byline'], 'String');
             }
-            if (data.hasOwnProperty('authorImage')) {
-                obj['authorImage'] = ApiClient.convertToType(data['authorImage'], 'String');
+            if (data.hasOwnProperty('image')) {
+                obj['image'] = ApiClient.convertToType(data['image'], 'String');
             }
         }
         return obj;
@@ -63,14 +63,14 @@ class Author {
 }
 
 /**
- * @member {String} authorByline
+ * @member {String} byline
  */
-Author.prototype['authorByline'] = undefined;
+Author.prototype['byline'] = undefined;
 
 /**
- * @member {String} authorImage
+ * @member {String} image
  */
-Author.prototype['authorImage'] = undefined;
+Author.prototype['image'] = undefined;
 
 
 
