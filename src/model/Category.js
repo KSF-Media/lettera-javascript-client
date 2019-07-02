@@ -20,10 +20,45 @@ import ApiClient from '../ApiClient';
 export default class Category {
     
         /**
+         * value: "Framsidan"
+         * @const
+         */
+        "Framsidan" = "Framsidan";
+
+    
+        /**
          * value: "Nyheter"
          * @const
          */
         "Nyheter" = "Nyheter";
+
+    
+        /**
+         * value: "Ekonomi"
+         * @const
+         */
+        "Ekonomi" = "Ekonomi";
+
+    
+        /**
+         * value: "NordenOchVarlden"
+         * @const
+         */
+        "NordenOchVarlden" = "NordenOchVarlden";
+
+    
+        /**
+         * value: "Finland"
+         * @const
+         */
+        "Finland" = "Finland";
+
+    
+        /**
+         * value: "KlimatOchMiljo"
+         * @const
+         */
+        "KlimatOchMiljo" = "KlimatOchMiljo";
 
     
         /**
@@ -34,10 +69,73 @@ export default class Category {
 
     
         /**
+         * value: "Litteratur"
+         * @const
+         */
+        "Litteratur" = "Litteratur";
+
+    
+        /**
+         * value: "Musik"
+         * @const
+         */
+        "Musik" = "Musik";
+
+    
+        /**
+         * value: "Scen"
+         * @const
+         */
+        "Scen" = "Scen";
+
+    
+        /**
+         * value: "Konst"
+         * @const
+         */
+        "Konst" = "Konst";
+
+    
+        /**
+         * value: "FilmOchTv"
+         * @const
+         */
+        "FilmOchTv" = "FilmOchTv";
+
+    
+        /**
          * value: "Opinion"
          * @const
          */
         "Opinion" = "Opinion";
+
+    
+        /**
+         * value: "Ledare"
+         * @const
+         */
+        "Ledare" = "Ledare";
+
+    
+        /**
+         * value: "Kolumner"
+         * @const
+         */
+        "Kolumner" = "Kolumner";
+
+    
+        /**
+         * value: "Debatt"
+         * @const
+         */
+        "Debatt" = "Debatt";
+
+    
+        /**
+         * value: "Kronikor"
+         * @const
+         */
+        "Kronikor" = "Kronikor";
 
     
         /**
@@ -48,10 +146,94 @@ export default class Category {
 
     
         /**
+         * value: "Handboll"
+         * @const
+         */
+        "Handboll" = "Handboll";
+
+    
+        /**
+         * value: "Fotboll"
+         * @const
+         */
+        "Fotboll" = "Fotboll";
+
+    
+        /**
+         * value: "Ishockey"
+         * @const
+         */
+        "Ishockey" = "Ishockey";
+
+    
+        /**
+         * value: "Motorsport"
+         * @const
+         */
+        "Motorsport" = "Motorsport";
+
+    
+        /**
+         * value: "Friidrott"
+         * @const
+         */
+        "Friidrott" = "Friidrott";
+
+    
+        /**
+         * value: "Skidsport"
+         * @const
+         */
+        "Skidsport" = "Skidsport";
+
+    
+        /**
          * value: "Livsstil"
          * @const
          */
         "Livsstil" = "Livsstil";
+
+    
+        /**
+         * value: "MedicinOchHalsa"
+         * @const
+         */
+        "MedicinOchHalsa" = "MedicinOchHalsa";
+
+    
+        /**
+         * value: "FamiljOchRelationer"
+         * @const
+         */
+        "FamiljOchRelationer" = "FamiljOchRelationer";
+
+    
+        /**
+         * value: "MatOchDryck"
+         * @const
+         */
+        "MatOchDryck" = "MatOchDryck";
+
+    
+        /**
+         * value: "Resor"
+         * @const
+         */
+        "Resor" = "Resor";
+
+    
+        /**
+         * value: "BilarOchFordon"
+         * @const
+         */
+        "BilarOchFordon" = "BilarOchFordon";
+
+    
+        /**
+         * value: "HemOchTradgard"
+         * @const
+         */
+        "HemOchTradgard" = "HemOchTradgard";
 
     
 
