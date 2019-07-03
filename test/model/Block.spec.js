@@ -84,42 +84,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property shortcodeError (base name: "shortcodeError")', function() {
-      // uncomment below and update the code to test the property shortcodeError
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property embed (base name: "embed")', function() {
-      // uncomment below and update the code to test the property embed
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property instagramEmbed (base name: "instagramEmbed")', function() {
-      // uncomment below and update the code to test the property instagramEmbed
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property infogramEmbed (base name: "infogramEmbed")', function() {
-      // uncomment below and update the code to test the property infogramEmbed
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property twitterEmbed (base name: "twitterEmbed")', function() {
-      // uncomment below and update the code to test the property twitterEmbed
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property facebookEmbed (base name: "facebookEmbed")', function() {
-      // uncomment below and update the code to test the property facebookEmbed
-      //var instane = new Lettera.Block();
-      //expect(instance).to.be();
-    });
-
     it('should have the property quote (base name: "quote")', function() {
       // uncomment below and update the code to test the property quote
       //var instane = new Lettera.Block();

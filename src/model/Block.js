@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import BlockShortcodeError from './BlockShortcodeError';
 import FactInfo from './FactInfo';
 import ImageInfo from './ImageInfo';
 
@@ -65,24 +64,6 @@ class Block {
             if (data.hasOwnProperty('headline')) {
                 obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
             }
-            if (data.hasOwnProperty('shortcodeError')) {
-                obj['shortcodeError'] = BlockShortcodeError.constructFromObject(data['shortcodeError']);
-            }
-            if (data.hasOwnProperty('embed')) {
-                obj['embed'] = ApiClient.convertToType(data['embed'], [Object]);
-            }
-            if (data.hasOwnProperty('instagramEmbed')) {
-                obj['instagramEmbed'] = ApiClient.convertToType(data['instagramEmbed'], 'String');
-            }
-            if (data.hasOwnProperty('infogramEmbed')) {
-                obj['infogramEmbed'] = ApiClient.convertToType(data['infogramEmbed'], [Object]);
-            }
-            if (data.hasOwnProperty('twitterEmbed')) {
-                obj['twitterEmbed'] = ApiClient.convertToType(data['twitterEmbed'], 'String');
-            }
-            if (data.hasOwnProperty('facebookEmbed')) {
-                obj['facebookEmbed'] = ApiClient.convertToType(data['facebookEmbed'], 'String');
-            }
             if (data.hasOwnProperty('quote')) {
                 obj['quote'] = ApiClient.convertToType(data['quote'], 'String');
             }
@@ -117,36 +98,6 @@ Block.prototype['factBox'] = undefined;
  * @member {String} headline
  */
 Block.prototype['headline'] = undefined;
-
-/**
- * @member {module:model/BlockShortcodeError} shortcodeError
- */
-Block.prototype['shortcodeError'] = undefined;
-
-/**
- * @member {Array.<Object>} embed
- */
-Block.prototype['embed'] = undefined;
-
-/**
- * @member {String} instagramEmbed
- */
-Block.prototype['instagramEmbed'] = undefined;
-
-/**
- * @member {Array.<Object>} infogramEmbed
- */
-Block.prototype['infogramEmbed'] = undefined;
-
-/**
- * @member {String} twitterEmbed
- */
-Block.prototype['twitterEmbed'] = undefined;
-
-/**
- * @member {String} facebookEmbed
- */
-Block.prototype['facebookEmbed'] = undefined;
 
 /**
  * @member {String} quote

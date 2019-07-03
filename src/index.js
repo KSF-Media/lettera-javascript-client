@@ -18,7 +18,6 @@ import Article from './model/Article';
 import ArticleType from './model/ArticleType';
 import Author from './model/Author';
 import Block from './model/Block';
-import BlockShortcodeError from './model/BlockShortcodeError';
 import Category from './model/Category';
 import CategoryHierarchy from './model/CategoryHierarchy';
 import FactInfo from './model/FactInfo';
@@ -98,12 +97,6 @@ export {
      * @property {module:model/Block}
      */
     Block,
-
-    /**
-     * The BlockShortcodeError model constructor.
-     * @property {module:model/BlockShortcodeError}
-     */
-    BlockShortcodeError,
 
     /**
      * The Category model constructor.
