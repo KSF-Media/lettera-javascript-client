@@ -18,7 +18,6 @@ import Article from './model/Article';
 import ArticleType from './model/ArticleType';
 import Author from './model/Author';
 import Block from './model/Block';
-import Category from './model/Category';
 import CategoryHierarchy from './model/CategoryHierarchy';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
@@ -97,12 +96,6 @@ export {
      * @property {module:model/Block}
      */
     Block,
-
-    /**
-     * The Category model constructor.
-     * @property {module:model/Category}
-     */
-    Category,
 
     /**
      * The CategoryHierarchy model constructor.

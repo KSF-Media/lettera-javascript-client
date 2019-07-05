@@ -47,7 +47,7 @@ export default class ListsApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
-     * @param {module:model/String} opts.category 
+     * @param {String} opts.category 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */

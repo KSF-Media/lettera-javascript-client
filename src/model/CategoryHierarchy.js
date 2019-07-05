@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Category from './Category';
 
 /**
  * The CategoryHierarchy model module.
@@ -23,8 +22,8 @@ class CategoryHierarchy {
     /**
      * Constructs a new <code>CategoryHierarchy</code>.
      * @alias module:model/CategoryHierarchy
-     * @param name {module:model/Category} 
-     * @param subcategories {Array.<module:model/Category>} 
+     * @param name {String} 
+     * @param subcategories {Array.<String>} 
      */
     constructor(name, subcategories) { 
         
@@ -53,10 +52,10 @@ class CategoryHierarchy {
             obj = obj || new CategoryHierarchy();
 
             if (data.hasOwnProperty('name')) {
-                obj['name'] = Category.constructFromObject(data['name']);
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
             if (data.hasOwnProperty('subcategories')) {
-                obj['subcategories'] = ApiClient.convertToType(data['subcategories'], [Category]);
+                obj['subcategories'] = ApiClient.convertToType(data['subcategories'], ['String']);
             }
         }
         return obj;
@@ -66,12 +65,12 @@ class CategoryHierarchy {
 }
 
 /**
- * @member {module:model/Category} name
+ * @member {String} name
  */
 CategoryHierarchy.prototype['name'] = undefined;
 
 /**
- * @member {Array.<module:model/Category>} subcategories
+ * @member {Array.<String>} subcategories
  */
 CategoryHierarchy.prototype['subcategories'] = undefined;
 

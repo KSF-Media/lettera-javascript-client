@@ -140,7 +140,6 @@ Class | Method | HTTP request | Description
  - [Lettera.ArticleType](docs/ArticleType.md)
  - [Lettera.Author](docs/Author.md)
  - [Lettera.Block](docs/Block.md)
- - [Lettera.Category](docs/Category.md)
  - [Lettera.CategoryHierarchy](docs/CategoryHierarchy.md)
  - [Lettera.FactInfo](docs/FactInfo.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
