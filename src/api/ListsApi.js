@@ -133,6 +133,7 @@ export default class ListsApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
+     * @param {String} opts.category 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */
@@ -144,7 +145,8 @@ export default class ListsApi {
       };
       let queryParams = {
         'start': opts['start'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'category': opts['category']
       };
       let headerParams = {
       };

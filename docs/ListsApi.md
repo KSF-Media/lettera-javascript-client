@@ -120,7 +120,8 @@ import Lettera from 'lettera';
 let apiInstance = new Lettera.ListsApi();
 let opts = {
   'start': 56, // Number | 
-  'limit': 56 // Number | 
+  'limit': 56, // Number | 
+  'category': "category_example" // String | 
 };
 apiInstance.mostreadGet(opts, (error, data, response) => {
   if (error) {
@@ -138,6 +139,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
+ **category** | **String**|  | [optional] 
 
 ### Return type
 
