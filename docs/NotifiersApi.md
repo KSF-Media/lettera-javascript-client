@@ -20,7 +20,7 @@ Listens to OC Notifier
 import Lettera from 'lettera';
 
 let apiInstance = new Lettera.NotifiersApi();
-let body = "body_example"; // String | 
+let body = new Lettera.Notification(); // Notification | 
 apiInstance.notifyPost(body, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -35,7 +35,7 @@ apiInstance.notifyPost(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **String**|  | 
+ **body** | [**Notification**](Notification.md)|  | 
 
 ### Return type
 

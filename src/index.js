@@ -19,9 +19,11 @@ import ArticleType from './model/ArticleType';
 import Author from './model/Author';
 import Block from './model/Block';
 import CategoryHierarchy from './model/CategoryHierarchy';
+import EventType from './model/EventType';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
 import ListArticle from './model/ListArticle';
+import Notification from './model/Notification';
 import RelatedArticle from './model/RelatedArticle';
 import ArticlesApi from './api/ArticlesApi';
 import CategoriesApi from './api/CategoriesApi';
@@ -104,6 +106,12 @@ export {
     CategoryHierarchy,
 
     /**
+     * The EventType model constructor.
+     * @property {module:model/EventType}
+     */
+    EventType,
+
+    /**
      * The FactInfo model constructor.
      * @property {module:model/FactInfo}
      */
@@ -120,6 +128,12 @@ export {
      * @property {module:model/ListArticle}
      */
     ListArticle,
+
+    /**
+     * The Notification model constructor.
+     * @property {module:model/Notification}
+     */
+    Notification,
 
     /**
      * The RelatedArticle model constructor.

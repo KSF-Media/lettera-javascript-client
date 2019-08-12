@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import Notification from '../model/Notification';
 
 /**
 * Notifiers service.
@@ -43,7 +44,7 @@ export default class NotifiersApi {
 
     /**
      * Listens to OC Notifier
-     * @param {String} body 
+     * @param {module:model/Notification} body 
      * @param {module:api/NotifiersApi~notifyPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
     notifyPost(body, callback) {

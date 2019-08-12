@@ -141,9 +141,11 @@ Class | Method | HTTP request | Description
  - [Lettera.Author](docs/Author.md)
  - [Lettera.Block](docs/Block.md)
  - [Lettera.CategoryHierarchy](docs/CategoryHierarchy.md)
+ - [Lettera.EventType](docs/EventType.md)
  - [Lettera.FactInfo](docs/FactInfo.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
  - [Lettera.ListArticle](docs/ListArticle.md)
+ - [Lettera.Notification](docs/Notification.md)
  - [Lettera.RelatedArticle](docs/RelatedArticle.md)
 
 
