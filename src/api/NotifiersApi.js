@@ -45,9 +45,12 @@ export default class NotifiersApi {
     /**
      * Listens to OC Notifier
      * @param {module:model/Notification} body 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
      * @param {module:api/NotifiersApi~notifyPostCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    notifyPost(body, callback) {
+    notifyPost(body, opts, callback) {
+      opts = opts || {};
       let postBody = body;
       // verify the required parameter 'body' is set
       if (body === undefined || body === null) {
@@ -57,6 +60,7 @@ export default class NotifiersApi {
       let pathParams = {
       };
       let queryParams = {
+        'token': opts['token']
       };
       let headerParams = {
       };

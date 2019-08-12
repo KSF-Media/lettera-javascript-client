@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## notifyPost
 
-> notifyPost(body)
+> notifyPost(body, opts)
 
 Listens to OC Notifier
 
@@ -21,7 +21,10 @@ import Lettera from 'lettera';
 
 let apiInstance = new Lettera.NotifiersApi();
 let body = new Lettera.Notification(); // Notification | 
-apiInstance.notifyPost(body, (error, data, response) => {
+let opts = {
+  'token': "token_example" // String | 
+};
+apiInstance.notifyPost(body, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -36,6 +39,7 @@ apiInstance.notifyPost(body, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**Notification**](Notification.md)|  | 
+ **token** | **String**|  | [optional] 
 
 ### Return type
 
