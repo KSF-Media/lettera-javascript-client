@@ -126,6 +126,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property articleTypeDetails (base name: "articleTypeDetails")', function() {
+      // uncomment below and update the code to test the property articleTypeDetails
+      //var instane = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
     it('should have the property externalScripts (base name: "externalScripts")', function() {
       // uncomment below and update the code to test the property externalScripts
       //var instane = new Lettera.Article();

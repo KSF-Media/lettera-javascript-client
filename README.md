@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
  - [Lettera.Alignment](docs/Alignment.md)
  - [Lettera.Article](docs/Article.md)
  - [Lettera.ArticleType](docs/ArticleType.md)
+ - [Lettera.ArticleTypeDetails](docs/ArticleTypeDetails.md)
  - [Lettera.Author](docs/Author.md)
  - [Lettera.Block](docs/Block.md)
  - [Lettera.CategoryHierarchy](docs/CategoryHierarchy.md)

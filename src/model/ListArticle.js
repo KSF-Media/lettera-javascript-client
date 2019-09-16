@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ArticleType from './ArticleType';
+import ArticleTypeDetails from './ArticleTypeDetails';
 import Author from './Author';
 import ImageInfo from './ImageInfo';
 import RelatedArticle from './RelatedArticle';
@@ -100,6 +101,9 @@ class ListArticle {
             if (data.hasOwnProperty('articleType')) {
                 obj['articleType'] = ArticleType.constructFromObject(data['articleType']);
             }
+            if (data.hasOwnProperty('articleTypeDetails')) {
+                obj['articleTypeDetails'] = ArticleTypeDetails.constructFromObject(data['articleTypeDetails']);
+            }
         }
         return obj;
     }
@@ -161,6 +165,11 @@ ListArticle.prototype['relatedArticles'] = undefined;
  * @member {module:model/ArticleType} articleType
  */
 ListArticle.prototype['articleType'] = undefined;
+
+/**
+ * @member {module:model/ArticleTypeDetails} articleTypeDetails
+ */
+ListArticle.prototype['articleTypeDetails'] = undefined;
 
 
 

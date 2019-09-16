@@ -16,6 +16,7 @@ import ApiClient from './ApiClient';
 import Alignment from './model/Alignment';
 import Article from './model/Article';
 import ArticleType from './model/ArticleType';
+import ArticleTypeDetails from './model/ArticleTypeDetails';
 import Author from './model/Author';
 import Block from './model/Block';
 import CategoryHierarchy from './model/CategoryHierarchy';
@@ -86,6 +87,12 @@ export {
      * @property {module:model/ArticleType}
      */
     ArticleType,
+
+    /**
+     * The ArticleTypeDetails model constructor.
+     * @property {module:model/ArticleTypeDetails}
+     */
+    ArticleTypeDetails,
 
     /**
      * The Author model constructor.

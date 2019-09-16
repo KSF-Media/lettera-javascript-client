@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import ArticleType from './ArticleType';
+import ArticleTypeDetails from './ArticleTypeDetails';
 import Author from './Author';
 import Block from './Block';
 import ImageInfo from './ImageInfo';
@@ -106,6 +107,9 @@ class Article {
             if (data.hasOwnProperty('articleType')) {
                 obj['articleType'] = ArticleType.constructFromObject(data['articleType']);
             }
+            if (data.hasOwnProperty('articleTypeDetails')) {
+                obj['articleTypeDetails'] = ArticleTypeDetails.constructFromObject(data['articleTypeDetails']);
+            }
             if (data.hasOwnProperty('externalScripts')) {
                 obj['externalScripts'] = ApiClient.convertToType(data['externalScripts'], ['String']);
             }
@@ -181,6 +185,11 @@ Article.prototype['updateTime'] = undefined;
  * @member {module:model/ArticleType} articleType
  */
 Article.prototype['articleType'] = undefined;
+
+/**
+ * @member {module:model/ArticleTypeDetails} articleTypeDetails
+ */
+Article.prototype['articleTypeDetails'] = undefined;
 
 /**
  * @member {Array.<String>} externalScripts
