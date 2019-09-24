@@ -77,7 +77,8 @@ let apiInstance = new Lettera.ArticlesApi();
 let uuid = null; // String | 
 let opts = {
   'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
+  'authorization': "authorization_example", // String | 
+  'textonly': false // Boolean | 
 };
 apiInstance.articleUuidGet(uuid, opts, (error, data, response) => {
   if (error) {
@@ -96,6 +97,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **textonly** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
 

@@ -92,6 +92,7 @@ export default class ArticlesApi {
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {Boolean} opts.textonly  (default to false)
      * @param {module:api/ArticlesApi~articleUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Article}
      */
@@ -107,6 +108,7 @@ export default class ArticlesApi {
         'uuid': uuid
       };
       let queryParams = {
+        'textonly': opts['textonly']
       };
       let headerParams = {
         'AuthUser': opts['authUser'],
