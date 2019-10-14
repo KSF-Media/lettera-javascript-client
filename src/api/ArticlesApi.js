@@ -47,6 +47,7 @@ export default class ArticlesApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
+     * @param {module:model/String} opts.paper 
      * @param {String} opts.contentQuery 
      * @param {module:api/ArticlesApi~articleSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/Article>}
@@ -60,6 +61,7 @@ export default class ArticlesApi {
       let queryParams = {
         'start': opts['start'],
         'limit': opts['limit'],
+        'paper': opts['paper'],
         'contentQuery': opts['contentQuery']
       };
       let headerParams = {

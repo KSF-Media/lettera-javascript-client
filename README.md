@@ -105,6 +105,7 @@ var api = new Lettera.ArticlesApi()
 var opts = {
   'start': 56, // {Number} 
   'limit': 56, // {Number} 
+  'paper': "paper_example", // {String} 
   'contentQuery': "contentQuery_example" // {String} 
 };
 var callback = function(error, data, response) {
@@ -147,6 +148,7 @@ Class | Method | HTTP request | Description
  - [Lettera.ImageInfo](docs/ImageInfo.md)
  - [Lettera.ListArticle](docs/ListArticle.md)
  - [Lettera.Notification](docs/Notification.md)
+ - [Lettera.Paper](docs/Paper.md)
  - [Lettera.RelatedArticle](docs/RelatedArticle.md)
 
 

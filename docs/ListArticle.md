@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **relatedArticles** | [**[RelatedArticle]**](RelatedArticle.md) |  | 
 **articleType** | [**ArticleType**](ArticleType.md) |  | 
 **articleTypeDetails** | [**ArticleTypeDetails**](ArticleTypeDetails.md) |  | [optional] 
+**paper** | [**Paper**](Paper.md) |  | 
 
 

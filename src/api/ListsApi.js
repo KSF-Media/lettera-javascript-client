@@ -48,6 +48,7 @@ export default class ListsApi {
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {String} opts.category 
+     * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */
@@ -60,7 +61,8 @@ export default class ListsApi {
       let queryParams = {
         'start': opts['start'],
         'limit': opts['limit'],
-        'category': opts['category']
+        'category': opts['category'],
+        'paper': opts['paper']
       };
       let headerParams = {
       };
@@ -91,6 +93,7 @@ export default class ListsApi {
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
+     * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */
@@ -102,7 +105,8 @@ export default class ListsApi {
       };
       let queryParams = {
         'start': opts['start'],
-        'limit': opts['limit']
+        'limit': opts['limit'],
+        'paper': opts['paper']
       };
       let headerParams = {
       };
@@ -134,6 +138,7 @@ export default class ListsApi {
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {String} opts.category 
+     * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */
@@ -146,7 +151,8 @@ export default class ListsApi {
       let queryParams = {
         'start': opts['start'],
         'limit': opts['limit'],
-        'category': opts['category']
+        'category': opts['category'],
+        'paper': opts['paper']
       };
       let headerParams = {
       };

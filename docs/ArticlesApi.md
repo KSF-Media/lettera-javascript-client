@@ -26,6 +26,7 @@ let apiInstance = new Lettera.ArticlesApi();
 let opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
+  'paper': "paper_example", // String | 
   'contentQuery': "contentQuery_example" // String | 
 };
 apiInstance.articleSearchGet(opts, (error, data, response) => {
@@ -44,6 +45,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
+ **paper** | **String**|  | [optional] 
  **contentQuery** | **String**|  | [optional] 
 
 ### Return type

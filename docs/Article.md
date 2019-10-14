@@ -20,5 +20,6 @@ Name | Type | Description | Notes
 **externalScripts** | **[String]** |  | [optional] 
 **relatedArticles** | [**[RelatedArticle]**](RelatedArticle.md) |  | 
 **shareUrl** | **String** |  | [optional] 
+**paper** | [**Paper**](Paper.md) |  | 
 
 

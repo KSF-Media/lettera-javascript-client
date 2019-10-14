@@ -25,6 +25,7 @@ import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
 import ListArticle from './model/ListArticle';
 import Notification from './model/Notification';
+import Paper from './model/Paper';
 import RelatedArticle from './model/RelatedArticle';
 import ArticlesApi from './api/ArticlesApi';
 import CategoriesApi from './api/CategoriesApi';
@@ -141,6 +142,12 @@ export {
      * @property {module:model/Notification}
      */
     Notification,
+
+    /**
+     * The Paper model constructor.
+     * @property {module:model/Paper}
+     */
+    Paper,
 
     /**
      * The RelatedArticle model constructor.

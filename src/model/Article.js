@@ -17,6 +17,7 @@ import ArticleTypeDetails from './ArticleTypeDetails';
 import Author from './Author';
 import Block from './Block';
 import ImageInfo from './ImageInfo';
+import Paper from './Paper';
 import RelatedArticle from './RelatedArticle';
 
 /**
@@ -37,10 +38,11 @@ class Article {
      * @param publishingTime {String} 
      * @param articleType {module:model/ArticleType} 
      * @param relatedArticles {Array.<module:model/RelatedArticle>} 
+     * @param paper {module:model/Paper} 
      */
-    constructor(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
+    constructor(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles, paper) { 
         
-        Article.initialize(this, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles);
+        Article.initialize(this, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles, paper);
     }
 
     /**
@@ -48,7 +50,7 @@ class Article {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles) { 
+    static initialize(obj, uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles, paper) { 
         obj['uuid'] = uuid;
         obj['title'] = title;
         obj['authors'] = authors;
@@ -58,6 +60,7 @@ class Article {
         obj['publishingTime'] = publishingTime;
         obj['articleType'] = articleType;
         obj['relatedArticles'] = relatedArticles;
+        obj['paper'] = paper;
     }
 
     /**
@@ -118,6 +121,9 @@ class Article {
             }
             if (data.hasOwnProperty('shareUrl')) {
                 obj['shareUrl'] = ApiClient.convertToType(data['shareUrl'], 'String');
+            }
+            if (data.hasOwnProperty('paper')) {
+                obj['paper'] = Paper.constructFromObject(data['paper']);
             }
         }
         return obj;
@@ -205,6 +211,11 @@ Article.prototype['relatedArticles'] = undefined;
  * @member {String} shareUrl
  */
 Article.prototype['shareUrl'] = undefined;
+
+/**
+ * @member {module:model/Paper} paper
+ */
+Article.prototype['paper'] = undefined;
 
 
 

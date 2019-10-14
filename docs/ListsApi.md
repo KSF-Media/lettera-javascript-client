@@ -25,7 +25,8 @@ let apiInstance = new Lettera.ListsApi();
 let opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
-  'category': "category_example" // String | 
+  'category': "category_example", // String | 
+  'paper': "paper_example" // String | 
 };
 apiInstance.frontpageGet(opts, (error, data, response) => {
   if (error) {
@@ -44,6 +45,7 @@ Name | Type | Description  | Notes
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **category** | **String**|  | [optional] 
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 
@@ -73,7 +75,8 @@ import Lettera from 'lettera';
 let apiInstance = new Lettera.ListsApi();
 let opts = {
   'start': 56, // Number | 
-  'limit': 56 // Number | 
+  'limit': 56, // Number | 
+  'paper': "paper_example" // String | 
 };
 apiInstance.latestGet(opts, (error, data, response) => {
   if (error) {
@@ -91,6 +94,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 
@@ -121,7 +125,8 @@ let apiInstance = new Lettera.ListsApi();
 let opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
-  'category': "category_example" // String | 
+  'category': "category_example", // String | 
+  'paper': "paper_example" // String | 
 };
 apiInstance.mostreadGet(opts, (error, data, response) => {
   if (error) {
@@ -140,6 +145,7 @@ Name | Type | Description  | Notes
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **category** | **String**|  | [optional] 
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 
