@@ -170,5 +170,51 @@ export default class ListsApi {
       );
     }
 
+    /**
+     * Callback function to receive the result of the searchGet operation.
+     * @callback module:api/ListsApi~searchGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ListArticle>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns a list of search results
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
+     * @param {module:model/String} opts.paper 
+     * @param {String} opts.contentQuery 
+     * @param {module:api/ListsApi~searchGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ListArticle>}
+     */
+    searchGet(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
+        'paper': opts['paper'],
+        'contentQuery': opts['contentQuery']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['application/json;charset=utf-8'];
+      let returnType = [ListArticle];
+      return this.apiClient.callApi(
+        '/search', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
 
 }

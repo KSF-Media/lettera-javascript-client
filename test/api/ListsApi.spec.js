@@ -78,6 +78,16 @@
         done();
       });
     });
+    describe('searchGet', function() {
+      it('should call searchGet successfully', function(done) {
+        //uncomment below and update the code to test searchGet
+        //instance.searchGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
