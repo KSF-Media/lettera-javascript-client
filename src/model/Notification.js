@@ -24,13 +24,12 @@ class Notification {
      * Constructs a new <code>Notification</code>.
      * @alias module:model/Notification
      * @param contentType {String} 
-     * @param eventid {Number} 
      * @param eventtype {module:model/EventType} 
      * @param uuid {String} 
      */
-    constructor(contentType, eventid, eventtype, uuid) { 
+    constructor(contentType, eventtype, uuid) { 
         
-        Notification.initialize(this, contentType, eventid, eventtype, uuid);
+        Notification.initialize(this, contentType, eventtype, uuid);
     }
 
     /**
@@ -38,9 +37,8 @@ class Notification {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, contentType, eventid, eventtype, uuid) { 
+    static initialize(obj, contentType, eventtype, uuid) { 
         obj['contentType'] = contentType;
-        obj['eventid'] = eventid;
         obj['eventtype'] = eventtype;
         obj['uuid'] = uuid;
     }

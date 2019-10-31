@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **contentType** | **String** |  | 
-**eventid** | **Number** |  | 
+**eventid** | **Number** |  | [optional] 
 **eventtype** | [**EventType**](EventType.md) |  | 
 **uuid** | **String** |  | 
 
