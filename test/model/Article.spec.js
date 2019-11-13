@@ -156,6 +156,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property analyticsCategories (base name: "analyticsCategories")', function() {
+      // uncomment below and update the code to test the property analyticsCategories
+      //var instane = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property analyticsSections (base name: "analyticsSections")', function() {
+      // uncomment below and update the code to test the property analyticsSections
+      //var instane = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

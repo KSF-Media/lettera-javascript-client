@@ -125,6 +125,12 @@ class Article {
             if (data.hasOwnProperty('paper')) {
                 obj['paper'] = Paper.constructFromObject(data['paper']);
             }
+            if (data.hasOwnProperty('analyticsCategories')) {
+                obj['analyticsCategories'] = ApiClient.convertToType(data['analyticsCategories'], 'String');
+            }
+            if (data.hasOwnProperty('analyticsSections')) {
+                obj['analyticsSections'] = ApiClient.convertToType(data['analyticsSections'], 'String');
+            }
         }
         return obj;
     }
@@ -216,6 +222,16 @@ Article.prototype['shareUrl'] = undefined;
  * @member {module:model/Paper} paper
  */
 Article.prototype['paper'] = undefined;
+
+/**
+ * @member {String} analyticsCategories
+ */
+Article.prototype['analyticsCategories'] = undefined;
+
+/**
+ * @member {String} analyticsSections
+ */
+Article.prototype['analyticsSections'] = undefined;
 
 
 
