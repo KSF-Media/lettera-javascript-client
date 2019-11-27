@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **relatedArticles** | [**[RelatedArticle]**](RelatedArticle.md) |  | 
 **shareUrl** | **String** |  | [optional] 
 **paper** | [**Paper**](Paper.md) |  | 
-**analyticsCategories** | **String** |  | [optional] 
-**analyticsSections** | **String** |  | [optional] 
+**analyticsCategory** | **String** |  | [optional] 
+**analyticsSection** | **String** |  | [optional] 
 
 

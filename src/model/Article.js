@@ -125,11 +125,11 @@ class Article {
             if (data.hasOwnProperty('paper')) {
                 obj['paper'] = Paper.constructFromObject(data['paper']);
             }
-            if (data.hasOwnProperty('analyticsCategories')) {
-                obj['analyticsCategories'] = ApiClient.convertToType(data['analyticsCategories'], 'String');
+            if (data.hasOwnProperty('analyticsCategory')) {
+                obj['analyticsCategory'] = ApiClient.convertToType(data['analyticsCategory'], 'String');
             }
-            if (data.hasOwnProperty('analyticsSections')) {
-                obj['analyticsSections'] = ApiClient.convertToType(data['analyticsSections'], 'String');
+            if (data.hasOwnProperty('analyticsSection')) {
+                obj['analyticsSection'] = ApiClient.convertToType(data['analyticsSection'], 'String');
             }
         }
         return obj;
@@ -224,14 +224,14 @@ Article.prototype['shareUrl'] = undefined;
 Article.prototype['paper'] = undefined;
 
 /**
- * @member {String} analyticsCategories
+ * @member {String} analyticsCategory
  */
-Article.prototype['analyticsCategories'] = undefined;
+Article.prototype['analyticsCategory'] = undefined;
 
 /**
- * @member {String} analyticsSections
+ * @member {String} analyticsSection
  */
-Article.prototype['analyticsSections'] = undefined;
+Article.prototype['analyticsSection'] = undefined;
 
 
 

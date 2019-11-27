@@ -156,14 +156,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property analyticsCategories (base name: "analyticsCategories")', function() {
-      // uncomment below and update the code to test the property analyticsCategories
+    it('should have the property analyticsCategory (base name: "analyticsCategory")', function() {
+      // uncomment below and update the code to test the property analyticsCategory
       //var instane = new Lettera.Article();
       //expect(instance).to.be();
     });
 
-    it('should have the property analyticsSections (base name: "analyticsSections")', function() {
-      // uncomment below and update the code to test the property analyticsSections
+    it('should have the property analyticsSection (base name: "analyticsSection")', function() {
+      // uncomment below and update the code to test the property analyticsSection
       //var instane = new Lettera.Article();
       //expect(instance).to.be();
     });
