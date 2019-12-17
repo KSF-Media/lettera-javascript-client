@@ -132,6 +132,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property shareUrl (base name: "shareUrl")', function() {
+      // uncomment below and update the code to test the property shareUrl
+      //var instane = new Lettera.ListArticle();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

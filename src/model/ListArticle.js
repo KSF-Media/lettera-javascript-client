@@ -110,6 +110,9 @@ class ListArticle {
             if (data.hasOwnProperty('paper')) {
                 obj['paper'] = Paper.constructFromObject(data['paper']);
             }
+            if (data.hasOwnProperty('shareUrl')) {
+                obj['shareUrl'] = ApiClient.convertToType(data['shareUrl'], 'String');
+            }
         }
         return obj;
     }
@@ -181,6 +184,11 @@ ListArticle.prototype['articleTypeDetails'] = undefined;
  * @member {module:model/Paper} paper
  */
 ListArticle.prototype['paper'] = undefined;
+
+/**
+ * @member {String} shareUrl
+ */
+ListArticle.prototype['shareUrl'] = undefined;
 
 
 

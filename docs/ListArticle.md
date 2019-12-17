@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **articleType** | [**ArticleType**](ArticleType.md) |  | 
 **articleTypeDetails** | [**ArticleTypeDetails**](ArticleTypeDetails.md) |  | [optional] 
 **paper** | [**Paper**](Paper.md) |  | 
+**shareUrl** | **String** |  | [optional] 
 
 
