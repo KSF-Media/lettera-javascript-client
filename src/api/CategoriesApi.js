@@ -44,15 +44,19 @@ export default class CategoriesApi {
 
     /**
      * Read categories
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.paper 
      * @param {module:api/CategoriesApi~categoriesGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CategoryHierarchy>}
      */
-    categoriesGet(callback) {
+    categoriesGet(opts, callback) {
+      opts = opts || {};
       let postBody = null;
 
       let pathParams = {
       };
       let queryParams = {
+        'paper': opts['paper']
       };
       let headerParams = {
       };

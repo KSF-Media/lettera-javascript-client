@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## categoriesGet
 
-> [CategoryHierarchy] categoriesGet()
+> [CategoryHierarchy] categoriesGet(opts)
 
 Read categories
 
@@ -20,7 +20,10 @@ Read categories
 import Lettera from 'lettera';
 
 let apiInstance = new Lettera.CategoriesApi();
-apiInstance.categoriesGet((error, data, response) => {
+let opts = {
+  'paper': "paper_example" // String | 
+};
+apiInstance.categoriesGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -31,7 +34,10 @@ apiInstance.categoriesGet((error, data, response) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 
