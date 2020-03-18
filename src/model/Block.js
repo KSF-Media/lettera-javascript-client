@@ -64,6 +64,12 @@ class Block {
             if (data.hasOwnProperty('headline')) {
                 obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
             }
+            if (data.hasOwnProperty('footnote')) {
+                obj['footnote'] = ApiClient.convertToType(data['footnote'], 'String');
+            }
+            if (data.hasOwnProperty('question')) {
+                obj['question'] = ApiClient.convertToType(data['question'], 'String');
+            }
             if (data.hasOwnProperty('quote')) {
                 obj['quote'] = ApiClient.convertToType(data['quote'], 'String');
             }
@@ -98,6 +104,16 @@ Block.prototype['factBox'] = undefined;
  * @member {String} headline
  */
 Block.prototype['headline'] = undefined;
+
+/**
+ * @member {String} footnote
+ */
+Block.prototype['footnote'] = undefined;
+
+/**
+ * @member {String} question
+ */
+Block.prototype['question'] = undefined;
 
 /**
  * @member {String} quote

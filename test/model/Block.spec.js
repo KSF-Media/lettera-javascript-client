@@ -84,6 +84,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property footnote (base name: "footnote")', function() {
+      // uncomment below and update the code to test the property footnote
+      //var instane = new Lettera.Block();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property question (base name: "question")', function() {
+      // uncomment below and update the code to test the property question
+      //var instane = new Lettera.Block();
+      //expect(instance).to.be();
+    });
+
     it('should have the property quote (base name: "quote")', function() {
       // uncomment below and update the code to test the property quote
       //var instane = new Lettera.Block();
