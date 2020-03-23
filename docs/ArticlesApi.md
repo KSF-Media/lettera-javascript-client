@@ -1,6 +1,6 @@
 # Lettera.ArticlesApi
 
-All URIs are relative to *http://http:/v1*
+All URIs are relative to *http://http:/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

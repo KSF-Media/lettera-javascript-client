@@ -1,6 +1,6 @@
 # Lettera.CategoriesApi
 
-All URIs are relative to *http://http:/v1*
+All URIs are relative to *http://http:/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## categoriesGet
 
-> [Object] categoriesGet(opts)
+> [Category] categoriesGet(opts)
 
 Read categories
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[Object]**
+[**[Category]**](Category.md)
 
 ### Authorization
 

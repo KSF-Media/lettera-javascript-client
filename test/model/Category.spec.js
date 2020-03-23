@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Lettera.Author();
+    instance = new Lettera.Category();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,22 +47,40 @@
       object[property] = value;
   }
 
-  describe('Author', function() {
-    it('should create an instance of Author', function() {
-      // uncomment below and update the code to test Author
-      //var instane = new Lettera.Author();
-      //expect(instance).to.be.a(Lettera.Author);
+  describe('Category', function() {
+    it('should create an instance of Category', function() {
+      // uncomment below and update the code to test Category
+      //var instane = new Lettera.Category();
+      //expect(instance).to.be.a(Lettera.Category);
     });
 
-    it('should have the property byline (base name: "byline")', function() {
-      // uncomment below and update the code to test the property byline
-      //var instane = new Lettera.Author();
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instane = new Lettera.Category();
       //expect(instance).to.be();
     });
 
-    it('should have the property image (base name: "image")', function() {
-      // uncomment below and update the code to test the property image
-      //var instane = new Lettera.Author();
+    it('should have the property label (base name: "label")', function() {
+      // uncomment below and update the code to test the property label
+      //var instane = new Lettera.Category();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property type (base name: "type")', function() {
+      // uncomment below and update the code to test the property type
+      //var instane = new Lettera.Category();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new Lettera.Category();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property subcategories (base name: "subcategories")', function() {
+      // uncomment below and update the code to test the property subcategories
+      //var instane = new Lettera.Category();
       //expect(instance).to.be();
     });
 
