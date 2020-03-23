@@ -13,7 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import CategoryHierarchy from '../model/CategoryHierarchy';
 
 /**
 * Categories service.
@@ -38,7 +37,7 @@ export default class CategoriesApi {
      * Callback function to receive the result of the categoriesGet operation.
      * @callback module:api/CategoriesApi~categoriesGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CategoryHierarchy>} data The data returned by the service call.
+     * @param {Array.<Object>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +46,7 @@ export default class CategoriesApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.paper 
      * @param {module:api/CategoriesApi~categoriesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CategoryHierarchy>}
+     * data is of type: {@link Array.<Object>}
      */
     categoriesGet(opts, callback) {
       opts = opts || {};
@@ -66,7 +65,7 @@ export default class CategoriesApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['application/json;charset=utf-8'];
-      let returnType = [CategoryHierarchy];
+      let returnType = [Object];
       return this.apiClient.callApi(
         '/categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

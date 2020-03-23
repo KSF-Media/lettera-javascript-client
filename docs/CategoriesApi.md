@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## categoriesGet
 
-> [CategoryHierarchy] categoriesGet(opts)
+> [Object] categoriesGet(opts)
 
 Read categories
 
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[CategoryHierarchy]**](CategoryHierarchy.md)
+**[Object]**
 
 ### Authorization
 

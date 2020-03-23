@@ -19,7 +19,6 @@ import ArticleType from './model/ArticleType';
 import ArticleTypeDetails from './model/ArticleTypeDetails';
 import Author from './model/Author';
 import Block from './model/Block';
-import CategoryHierarchy from './model/CategoryHierarchy';
 import EventType from './model/EventType';
 import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
@@ -106,12 +105,6 @@ export {
      * @property {module:model/Block}
      */
     Block,
-
-    /**
-     * The CategoryHierarchy model constructor.
-     * @property {module:model/CategoryHierarchy}
-     */
-    CategoryHierarchy,
 
     /**
      * The EventType model constructor.
