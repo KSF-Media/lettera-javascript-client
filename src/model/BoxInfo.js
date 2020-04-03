@@ -12,22 +12,24 @@
  */
 
 import ApiClient from '../ApiClient';
+import BoxType from './BoxType';
 
 /**
- * The FactInfo model module.
- * @module model/FactInfo
+ * The BoxInfo model module.
+ * @module model/BoxInfo
  * @version 2.0.0
  */
-class FactInfo {
+class BoxInfo {
     /**
-     * Constructs a new <code>FactInfo</code>.
-     * @alias module:model/FactInfo
+     * Constructs a new <code>BoxInfo</code>.
+     * @alias module:model/BoxInfo
      * @param title {String} 
      * @param content {Array.<String>} 
+     * @param type {module:model/BoxType} 
      */
-    constructor(title, content) { 
+    constructor(title, content, type) { 
         
-        FactInfo.initialize(this, title, content);
+        BoxInfo.initialize(this, title, content, type);
     }
 
     /**
@@ -35,27 +37,34 @@ class FactInfo {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, title, content) { 
+    static initialize(obj, title, content, type) { 
         obj['title'] = title;
         obj['content'] = content;
+        obj['type'] = type;
     }
 
     /**
-     * Constructs a <code>FactInfo</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>BoxInfo</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/FactInfo} obj Optional instance to populate.
-     * @return {module:model/FactInfo} The populated <code>FactInfo</code> instance.
+     * @param {module:model/BoxInfo} obj Optional instance to populate.
+     * @return {module:model/BoxInfo} The populated <code>BoxInfo</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new FactInfo();
+            obj = obj || new BoxInfo();
 
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
+            if (data.hasOwnProperty('headline')) {
+                obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
+            }
             if (data.hasOwnProperty('content')) {
                 obj['content'] = ApiClient.convertToType(data['content'], ['String']);
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = BoxType.constructFromObject(data['type']);
             }
         }
         return obj;
@@ -67,17 +76,27 @@ class FactInfo {
 /**
  * @member {String} title
  */
-FactInfo.prototype['title'] = undefined;
+BoxInfo.prototype['title'] = undefined;
+
+/**
+ * @member {String} headline
+ */
+BoxInfo.prototype['headline'] = undefined;
 
 /**
  * @member {Array.<String>} content
  */
-FactInfo.prototype['content'] = undefined;
+BoxInfo.prototype['content'] = undefined;
+
+/**
+ * @member {module:model/BoxType} type
+ */
+BoxInfo.prototype['type'] = undefined;
 
 
 
 
 
 
-export default FactInfo;
+export default BoxInfo;
 

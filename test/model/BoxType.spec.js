@@ -28,7 +28,6 @@
   var instance;
 
   beforeEach(function() {
-    instance = new Lettera.FactInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,23 +46,11 @@
       object[property] = value;
   }
 
-  describe('FactInfo', function() {
-    it('should create an instance of FactInfo', function() {
-      // uncomment below and update the code to test FactInfo
-      //var instane = new Lettera.FactInfo();
-      //expect(instance).to.be.a(Lettera.FactInfo);
-    });
-
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instane = new Lettera.FactInfo();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property content (base name: "content")', function() {
-      // uncomment below and update the code to test the property content
-      //var instane = new Lettera.FactInfo();
-      //expect(instance).to.be();
+  describe('BoxType', function() {
+    it('should create an instance of BoxType', function() {
+      // uncomment below and update the code to test BoxType
+      //var instane = new Lettera.BoxType();
+      //expect(instance).to.be.a(Lettera.BoxType);
     });
 
   });

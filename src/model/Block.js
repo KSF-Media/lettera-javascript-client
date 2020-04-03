@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import FactInfo from './FactInfo';
+import BoxInfo from './BoxInfo';
 import ImageInfo from './ImageInfo';
 
 /**
@@ -58,8 +58,8 @@ class Block {
             if (data.hasOwnProperty('image')) {
                 obj['image'] = ImageInfo.constructFromObject(data['image']);
             }
-            if (data.hasOwnProperty('factBox')) {
-                obj['factBox'] = FactInfo.constructFromObject(data['factBox']);
+            if (data.hasOwnProperty('box')) {
+                obj['box'] = BoxInfo.constructFromObject(data['box']);
             }
             if (data.hasOwnProperty('headline')) {
                 obj['headline'] = ApiClient.convertToType(data['headline'], 'String');
@@ -96,9 +96,9 @@ Block.prototype['html'] = undefined;
 Block.prototype['image'] = undefined;
 
 /**
- * @member {module:model/FactInfo} factBox
+ * @member {module:model/BoxInfo} box
  */
-Block.prototype['factBox'] = undefined;
+Block.prototype['box'] = undefined;
 
 /**
  * @member {String} headline

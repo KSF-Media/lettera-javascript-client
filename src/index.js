@@ -19,9 +19,10 @@ import ArticleType from './model/ArticleType';
 import ArticleTypeDetails from './model/ArticleTypeDetails';
 import Author from './model/Author';
 import Block from './model/Block';
+import BoxInfo from './model/BoxInfo';
+import BoxType from './model/BoxType';
 import Category from './model/Category';
 import EventType from './model/EventType';
-import FactInfo from './model/FactInfo';
 import ImageInfo from './model/ImageInfo';
 import ListArticle from './model/ListArticle';
 import Notification from './model/Notification';
@@ -108,6 +109,18 @@ export {
     Block,
 
     /**
+     * The BoxInfo model constructor.
+     * @property {module:model/BoxInfo}
+     */
+    BoxInfo,
+
+    /**
+     * The BoxType model constructor.
+     * @property {module:model/BoxType}
+     */
+    BoxType,
+
+    /**
      * The Category model constructor.
      * @property {module:model/Category}
      */
@@ -118,12 +131,6 @@ export {
      * @property {module:model/EventType}
      */
     EventType,
-
-    /**
-     * The FactInfo model constructor.
-     * @property {module:model/FactInfo}
-     */
-    FactInfo,
 
     /**
      * The ImageInfo model constructor.
