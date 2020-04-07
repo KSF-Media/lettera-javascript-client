@@ -131,6 +131,9 @@ class Article {
             if (data.hasOwnProperty('analyticsSection')) {
                 obj['analyticsSection'] = ApiClient.convertToType(data['analyticsSection'], 'String');
             }
+            if (data.hasOwnProperty('articlePriority')) {
+                obj['articlePriority'] = ApiClient.convertToType(data['articlePriority'], 'Number');
+            }
         }
         return obj;
     }
@@ -232,6 +235,11 @@ Article.prototype['analyticsCategory'] = undefined;
  * @member {String} analyticsSection
  */
 Article.prototype['analyticsSection'] = undefined;
+
+/**
+ * @member {Number} articlePriority
+ */
+Article.prototype['articlePriority'] = undefined;
 
 
 

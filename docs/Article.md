@@ -23,5 +23,6 @@ Name | Type | Description | Notes
 **paper** | [**Paper**](Paper.md) |  | 
 **analyticsCategory** | **String** |  | [optional] 
 **analyticsSection** | **String** |  | [optional] 
+**articlePriority** | **Number** |  | [optional] 
 
 
