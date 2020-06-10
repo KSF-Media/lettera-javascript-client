@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import ArticleTypeDetails from './ArticleTypeDetails';
 import ImageInfo from './ImageInfo';
 
 /**
@@ -79,6 +80,9 @@ class RelatedArticle {
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
             }
+            if (data.hasOwnProperty('articleTypeDetails')) {
+                obj['articleTypeDetails'] = ArticleTypeDetails.constructFromObject(data['articleTypeDetails']);
+            }
         }
         return obj;
     }
@@ -120,6 +124,11 @@ RelatedArticle.prototype['premium'] = undefined;
  * @member {Array.<String>} tags
  */
 RelatedArticle.prototype['tags'] = undefined;
+
+/**
+ * @member {module:model/ArticleTypeDetails} articleTypeDetails
+ */
+RelatedArticle.prototype['articleTypeDetails'] = undefined;
 
 
 

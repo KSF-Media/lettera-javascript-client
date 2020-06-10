@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **publishingTime** | **String** |  | 
 **premium** | **Boolean** |  | 
 **tags** | **[String]** |  | 
+**articleTypeDetails** | [**ArticleTypeDetails**](ArticleTypeDetails.md) |  | [optional] 
 
 
