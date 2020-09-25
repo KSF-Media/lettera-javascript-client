@@ -139,6 +139,7 @@ export default class ListsApi {
      * @param {Number} opts.limit 
      * @param {String} opts.category 
      * @param {module:model/String} opts.paper 
+     * @param {Boolean} opts.onlySubscribers 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ListArticle>}
      */
@@ -152,7 +153,8 @@ export default class ListsApi {
         'start': opts['start'],
         'limit': opts['limit'],
         'category': opts['category'],
-        'paper': opts['paper']
+        'paper': opts['paper'],
+        'onlySubscribers': opts['onlySubscribers']
       };
       let headerParams = {
       };

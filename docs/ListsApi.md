@@ -127,7 +127,8 @@ let opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'category': "category_example", // String | 
-  'paper': "paper_example" // String | 
+  'paper': "paper_example", // String | 
+  'onlySubscribers': true // Boolean | 
 };
 apiInstance.mostreadGet(opts, (error, data, response) => {
   if (error) {
@@ -147,6 +148,7 @@ Name | Type | Description  | Notes
  **limit** | **Number**|  | [optional] 
  **category** | **String**|  | [optional] 
  **paper** | **String**|  | [optional] 
+ **onlySubscribers** | **Boolean**|  | [optional] 
 
 ### Return type
 
