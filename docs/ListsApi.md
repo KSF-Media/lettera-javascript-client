@@ -20,25 +20,27 @@ Returns a list for a front page
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ListsApi();
-let opts = {
+var apiInstance = new Lettera.ListsApi();
+var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'category': "category_example", // String | 
   'paper': "paper_example" // String | 
 };
-apiInstance.frontpageGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.frontpageGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -71,24 +73,26 @@ Returns a list of latest articles
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ListsApi();
-let opts = {
+var apiInstance = new Lettera.ListsApi();
+var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'paper': "paper_example" // String | 
 };
-apiInstance.latestGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.latestGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -120,26 +124,28 @@ Returns a list of most read articles
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ListsApi();
-let opts = {
+var apiInstance = new Lettera.ListsApi();
+var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'category': "category_example", // String | 
   'paper': "paper_example", // String | 
   'onlySubscribers': true // Boolean | 
 };
-apiInstance.mostreadGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.mostreadGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -173,25 +179,27 @@ Returns a list of search results
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ListsApi();
-let opts = {
+var apiInstance = new Lettera.ListsApi();
+var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'paper': "paper_example", // String | 
   'contentQuery': "contentQuery_example" // String | 
 };
-apiInstance.searchGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.searchGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

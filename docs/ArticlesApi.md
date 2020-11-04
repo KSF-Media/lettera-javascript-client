@@ -20,25 +20,27 @@ Search article by content. It&#39;s a freetext search, so the &#x60;contentQuery
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ArticlesApi();
-let opts = {
+var apiInstance = new Lettera.ArticlesApi();
+var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
   'paper': "paper_example", // String | 
   'contentQuery': "contentQuery_example" // String | 
 };
-apiInstance.articleSearchGet(opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.articleSearchGet(opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
@@ -73,25 +75,27 @@ Fetch article by UUID.   Notes about the images:   The image URLs point to our i
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.ArticlesApi();
-let uuid = null; // String | 
-let opts = {
+var apiInstance = new Lettera.ArticlesApi();
+var uuid = null; // String | 
+var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example", // String | 
   'textonly': false // Boolean | 
 };
-apiInstance.articleUuidGet(uuid, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-});
+};
+apiInstance.articleUuidGet(uuid, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes

@@ -17,23 +17,25 @@ Listens to OC Notifier
 ### Example
 
 ```javascript
-import Lettera from 'lettera';
+var Lettera = require('lettera');
 
-let apiInstance = new Lettera.NotifiersApi();
-let body = new Lettera.Notification(); // Notification | 
-let opts = {
+var apiInstance = new Lettera.NotifiersApi();
+var body = new Lettera.Notification(); // Notification | 
+var opts = {
   'token': "token_example" // String | 
 };
-apiInstance.notifyPost(body, opts, (error, data, response) => {
+var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully.');
   }
-});
+};
+apiInstance.notifyPost(body, opts, callback);
 ```
 
 ### Parameters
+
 
 
 Name | Type | Description  | Notes
