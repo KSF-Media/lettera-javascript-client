@@ -1,7 +1,7 @@
 {
   "name": "lettera",
-  "version": "2.0.0",
-  "description": "KSF_Medias_articles_service",
+  "version": "3.0.0",
+  "description": "h2KSF_Medias_articles_service_h2Changelog_for_V3ulliUnified_codeListArticle_code_and_codeRelatedArticle_code_into_a_single_type_codeArticleStub_code__NOTE_In_contrast_to_the_old_types_codeArticleStub_relatedArticles_code_is_now_an_optional_value__liliAdded_endpoint_code_article_uuid_stub_code_liliRemoved_deprecated_endpoint_code_article_search_code_li_ul",
   "license": "Unlicense",
   "main": "src/index.js",
   "scripts": {

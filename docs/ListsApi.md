@@ -1,6 +1,6 @@
 # Lettera.ListsApi
 
-All URIs are relative to *http://http:/v2*
+All URIs are relative to *http://http:/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## frontpageGet
 
-> [ListArticle] frontpageGet(opts)
+> [ArticleStub] frontpageGet(opts)
 
 Returns a list for a front page
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListArticle]**](ListArticle.md)
+[**[ArticleStub]**](ArticleStub.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ No authorization required
 
 ## latestGet
 
-> [ListArticle] latestGet(opts)
+> [ArticleStub] latestGet(opts)
 
 Returns a list of latest articles
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListArticle]**](ListArticle.md)
+[**[ArticleStub]**](ArticleStub.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 
 ## mostreadGet
 
-> [ListArticle] mostreadGet(opts)
+> [ArticleStub] mostreadGet(opts)
 
 Returns a list of most read articles
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListArticle]**](ListArticle.md)
+[**[ArticleStub]**](ArticleStub.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ No authorization required
 
 ## searchGet
 
-> [ListArticle] searchGet(opts)
+> [ArticleStub] searchGet(opts)
 
 Returns a list of search results
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ListArticle]**](ListArticle.md)
+[**[ArticleStub]**](ArticleStub.md)
 
 ### Authorization
 
