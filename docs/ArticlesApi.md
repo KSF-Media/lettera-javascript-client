@@ -66,7 +66,7 @@ No authorization required
 
 ## articleUuidStubGet
 
-> ArticleStub articleUuidStubGet(uuid, opts)
+> ArticleStub articleUuidStubGet(uuid)
 
 
 
@@ -79,10 +79,6 @@ var Lettera = require('lettera');
 
 var apiInstance = new Lettera.ArticlesApi();
 var uuid = null; // String | 
-var opts = {
-  'authUser': null, // String | 
-  'authorization': "authorization_example" // String | 
-};
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -90,7 +86,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.articleUuidStubGet(uuid, opts, callback);
+apiInstance.articleUuidStubGet(uuid, callback);
 ```
 
 ### Parameters
@@ -100,8 +96,6 @@ apiInstance.articleUuidStubGet(uuid, opts, callback);
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | [**String**](.md)|  | 
- **authUser** | [**String**](.md)|  | [optional] 
- **authorization** | **String**|  | [optional] 
 
 ### Return type
 

@@ -110,14 +110,10 @@
     /**
      * Fetch an article stub by UUID
      * @param {String} uuid 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.authUser 
-     * @param {String} opts.authorization 
      * @param {module:api/ArticlesApi~articleUuidStubGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ArticleStub}
      */
-    this.articleUuidStubGet = function(uuid, opts, callback) {
-      opts = opts || {};
+    this.articleUuidStubGet = function(uuid, callback) {
       var postBody = null;
       // verify the required parameter 'uuid' is set
       if (uuid === undefined || uuid === null) {
@@ -132,8 +128,6 @@
       var collectionQueryParams = {
       };
       var headerParams = {
-        'AuthUser': opts['authUser'],
-        'Authorization': opts['authorization']
       };
       var formParams = {
       };
