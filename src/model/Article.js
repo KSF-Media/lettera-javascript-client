@@ -84,6 +84,9 @@
       if (data.hasOwnProperty('title')) {
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
+      if (data.hasOwnProperty('listTitle')) {
+        obj['listTitle'] = ApiClient.convertToType(data['listTitle'], 'String');
+      }
       if (data.hasOwnProperty('authors')) {
         obj['authors'] = ApiClient.convertToType(data['authors'], [Author]);
       }
@@ -150,6 +153,10 @@
    * @member {String} title
    */
   exports.prototype['title'] = undefined;
+  /**
+   * @member {String} listTitle
+   */
+  exports.prototype['listTitle'] = undefined;
   /**
    * @member {Array.<module:model/Author>} authors
    */

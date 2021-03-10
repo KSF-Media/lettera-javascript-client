@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property listTitle (base name: "listTitle")', function() {
+      // uncomment below and update the code to test the property listTitle
+      //var instance = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
     it('should have the property authors (base name: "authors")', function() {
       // uncomment below and update the code to test the property authors
       //var instance = new Lettera.Article();
