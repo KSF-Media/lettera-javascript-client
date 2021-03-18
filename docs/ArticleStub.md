@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **articleTypeDetails** | [**ArticleTypeDetails**](ArticleTypeDetails.md) |  | [optional] 
 **paper** | [**Paper**](Paper.md) |  | 
 **shareUrl** | **String** |  | [optional] 
+**liveReporting** | **Boolean** |  | 
 
 

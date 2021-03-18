@@ -50,8 +50,9 @@
    * @param publishingTime {String} 
    * @param articleType {module:model/ArticleType} 
    * @param paper {module:model/Paper} 
+   * @param liveReporting {Boolean} 
    */
-  var exports = function(uuid, title, authors, tags, premium, publishingTime, articleType, paper) {
+  var exports = function(uuid, title, authors, tags, premium, publishingTime, articleType, paper, liveReporting) {
     var _this = this;
 
     _this['uuid'] = uuid;
@@ -62,6 +63,7 @@
     _this['publishingTime'] = publishingTime;
     _this['articleType'] = articleType;
     _this['paper'] = paper;
+    _this['liveReporting'] = liveReporting;
   };
 
   /**
@@ -115,6 +117,9 @@
       }
       if (data.hasOwnProperty('shareUrl')) {
         obj['shareUrl'] = ApiClient.convertToType(data['shareUrl'], 'String');
+      }
+      if (data.hasOwnProperty('liveReporting')) {
+        obj['liveReporting'] = ApiClient.convertToType(data['liveReporting'], 'Boolean');
       }
     }
     return obj;
@@ -176,6 +181,10 @@
    * @member {String} shareUrl
    */
   exports.prototype['shareUrl'] = undefined;
+  /**
+   * @member {Boolean} liveReporting
+   */
+  exports.prototype['liveReporting'] = undefined;
 
 
 

@@ -140,6 +140,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property liveReporting (base name: "liveReporting")', function() {
+      // uncomment below and update the code to test the property liveReporting
+      //var instance = new Lettera.ArticleStub();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
