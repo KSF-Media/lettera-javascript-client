@@ -146,6 +146,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property articlePriority (base name: "articlePriority")', function() {
+      // uncomment below and update the code to test the property articlePriority
+      //var instance = new Lettera.ArticleStub();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

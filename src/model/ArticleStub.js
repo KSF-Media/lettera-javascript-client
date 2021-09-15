@@ -121,6 +121,9 @@
       if (data.hasOwnProperty('liveReporting')) {
         obj['liveReporting'] = ApiClient.convertToType(data['liveReporting'], 'Boolean');
       }
+      if (data.hasOwnProperty('articlePriority')) {
+        obj['articlePriority'] = ApiClient.convertToType(data['articlePriority'], 'Number');
+      }
     }
     return obj;
   }
@@ -185,6 +188,10 @@
    * @member {Boolean} liveReporting
    */
   exports.prototype['liveReporting'] = undefined;
+  /**
+   * @member {Number} articlePriority
+   */
+  exports.prototype['articlePriority'] = undefined;
 
 
 
