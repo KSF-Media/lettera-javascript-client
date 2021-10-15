@@ -120,6 +120,10 @@ Class | Method | HTTP request | Description
 *Lettera.ListsApi* | [**frontpageGet**](docs/ListsApi.md#frontpageGet) | **GET** /frontpage | Returns a list for a front page
 *Lettera.ListsApi* | [**latestGet**](docs/ListsApi.md#latestGet) | **GET** /latest | Returns a list of latest articles
 *Lettera.ListsApi* | [**mostreadGet**](docs/ListsApi.md#mostreadGet) | **GET** /mostread | Returns a list of most read articles
+*Lettera.ListsApi* | [**presetPresetCategoryGet**](docs/ListsApi.md#presetPresetCategoryGet) | **GET** /preset/{preset}/{category} | Load a preset model
+*Lettera.ListsApi* | [**presetPresetCategoryPost**](docs/ListsApi.md#presetPresetCategoryPost) | **POST** /preset/{preset}/{category} | Update a preset model
+*Lettera.ListsApi* | [**scoredPost**](docs/ListsApi.md#scoredPost) | **POST** /scored | List recent articles sorted by given scoring weights
+*Lettera.ListsApi* | [**scoredPresetGet**](docs/ListsApi.md#scoredPresetGet) | **GET** /scored/{preset} | List recent articles sorted by preset scoring
 *Lettera.ListsApi* | [**searchGet**](docs/ListsApi.md#searchGet) | **GET** /search | Returns a list of search results
 *Lettera.NotifiersApi* | [**notifyPost**](docs/NotifiersApi.md#notifyPost) | **POST** /notify | Listens to OC Notifier
 
@@ -136,10 +140,12 @@ Class | Method | HTTP request | Description
  - [Lettera.BoxInfo](docs/BoxInfo.md)
  - [Lettera.BoxType](docs/BoxType.md)
  - [Lettera.Category](docs/Category.md)
+ - [Lettera.Cutoff](docs/Cutoff.md)
  - [Lettera.EventType](docs/EventType.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
  - [Lettera.Notification](docs/Notification.md)
  - [Lettera.Paper](docs/Paper.md)
+ - [Lettera.Scoring](docs/Scoring.md)
 
 
 ## Documentation for Authorization

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ArticleStub'], factory);
+    define(['ApiClient', 'model/ArticleStub', 'model/Scoring'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ArticleStub'));
+    module.exports = factory(require('../ApiClient'), require('../model/ArticleStub'), require('../model/Scoring'));
   } else {
     // Browser globals (root is window)
     if (!root.Lettera) {
       root.Lettera = {};
     }
-    root.Lettera.ListsApi = factory(root.Lettera.ApiClient, root.Lettera.ArticleStub);
+    root.Lettera.ListsApi = factory(root.Lettera.ApiClient, root.Lettera.ArticleStub, root.Lettera.Scoring);
   }
-}(this, function(ApiClient, ArticleStub) {
+}(this, function(ApiClient, ArticleStub, Scoring) {
   'use strict';
 
   /**
@@ -186,6 +186,253 @@
       var returnType = [ArticleStub];
       return this.apiClient.callApi(
         '/mostread', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the presetPresetCategoryGet operation.
+     * @callback module:api/ListsApi~presetPresetCategoryGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/Scoring} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Load a preset model
+     * @param {String} authUser 
+     * @param {String} authorization 
+     * @param {Number} preset 
+     * @param {String} category 
+     * @param {module:api/ListsApi~presetPresetCategoryGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/Scoring}
+     */
+    this.presetPresetCategoryGet = function(authUser, authorization, preset, category, callback) {
+      var postBody = null;
+      // verify the required parameter 'authUser' is set
+      if (authUser === undefined || authUser === null) {
+        throw new Error("Missing the required parameter 'authUser' when calling presetPresetCategoryGet");
+      }
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling presetPresetCategoryGet");
+      }
+      // verify the required parameter 'preset' is set
+      if (preset === undefined || preset === null) {
+        throw new Error("Missing the required parameter 'preset' when calling presetPresetCategoryGet");
+      }
+      // verify the required parameter 'category' is set
+      if (category === undefined || category === null) {
+        throw new Error("Missing the required parameter 'category' when calling presetPresetCategoryGet");
+      }
+
+      var pathParams = {
+        'preset': preset,
+        'category': category
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': authUser,
+        'Authorization': authorization
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = Scoring;
+      return this.apiClient.callApi(
+        '/preset/{preset}/{category}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the presetPresetCategoryPost operation.
+     * @callback module:api/ListsApi~presetPresetCategoryPostCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Update a preset model
+     * @param {String} authUser 
+     * @param {String} authorization 
+     * @param {Number} preset 
+     * @param {String} category 
+     * @param {module:model/Scoring} body 
+     * @param {module:api/ListsApi~presetPresetCategoryPostCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    this.presetPresetCategoryPost = function(authUser, authorization, preset, category, body, callback) {
+      var postBody = body;
+      // verify the required parameter 'authUser' is set
+      if (authUser === undefined || authUser === null) {
+        throw new Error("Missing the required parameter 'authUser' when calling presetPresetCategoryPost");
+      }
+      // verify the required parameter 'authorization' is set
+      if (authorization === undefined || authorization === null) {
+        throw new Error("Missing the required parameter 'authorization' when calling presetPresetCategoryPost");
+      }
+      // verify the required parameter 'preset' is set
+      if (preset === undefined || preset === null) {
+        throw new Error("Missing the required parameter 'preset' when calling presetPresetCategoryPost");
+      }
+      // verify the required parameter 'category' is set
+      if (category === undefined || category === null) {
+        throw new Error("Missing the required parameter 'category' when calling presetPresetCategoryPost");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling presetPresetCategoryPost");
+      }
+
+      var pathParams = {
+        'preset': preset,
+        'category': category
+      };
+      var queryParams = {
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+        'AuthUser': authUser,
+        'Authorization': authorization
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi(
+        '/preset/{preset}/{category}', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the scoredPost operation.
+     * @callback module:api/ListsApi~scoredPostCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List recent articles sorted by given scoring weights
+     * @param {String} category 
+     * @param {module:model/String} paper 
+     * @param {module:model/Scoring} body 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
+     * @param {module:api/ListsApi~scoredPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ArticleStub>}
+     */
+    this.scoredPost = function(category, paper, body, opts, callback) {
+      opts = opts || {};
+      var postBody = body;
+      // verify the required parameter 'category' is set
+      if (category === undefined || category === null) {
+        throw new Error("Missing the required parameter 'category' when calling scoredPost");
+      }
+      // verify the required parameter 'paper' is set
+      if (paper === undefined || paper === null) {
+        throw new Error("Missing the required parameter 'paper' when calling scoredPost");
+      }
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling scoredPost");
+      }
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
+        'category': category,
+        'paper': paper,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [ArticleStub];
+      return this.apiClient.callApi(
+        '/scored', 'POST',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the scoredPresetGet operation.
+     * @callback module:api/ListsApi~scoredPresetGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * List recent articles sorted by preset scoring
+     * @param {Number} preset 
+     * @param {String} category 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
+     * @param {module:model/String} opts.paper 
+     * @param {module:api/ListsApi~scoredPresetGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ArticleStub>}
+     */
+    this.scoredPresetGet = function(preset, category, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'preset' is set
+      if (preset === undefined || preset === null) {
+        throw new Error("Missing the required parameter 'preset' when calling scoredPresetGet");
+      }
+      // verify the required parameter 'category' is set
+      if (category === undefined || category === null) {
+        throw new Error("Missing the required parameter 'category' when calling scoredPresetGet");
+      }
+
+      var pathParams = {
+        'preset': preset
+      };
+      var queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
+        'category': category,
+        'paper': opts['paper'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [ArticleStub];
+      return this.apiClient.callApi(
+        '/scored/{preset}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

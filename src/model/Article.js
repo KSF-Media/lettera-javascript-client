@@ -141,6 +141,9 @@
       if (data.hasOwnProperty('articlePriority')) {
         obj['articlePriority'] = ApiClient.convertToType(data['articlePriority'], 'Number');
       }
+      if (data.hasOwnProperty('articleTimeOnSite')) {
+        obj['articleTimeOnSite'] = ApiClient.convertToType(data['articleTimeOnSite'], 'Number');
+      }
     }
     return obj;
   }
@@ -229,6 +232,10 @@
    * @member {Number} articlePriority
    */
   exports.prototype['articlePriority'] = undefined;
+  /**
+   * @member {Number} articleTimeOnSite
+   */
+  exports.prototype['articleTimeOnSite'] = undefined;
 
 
 

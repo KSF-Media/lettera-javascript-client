@@ -182,6 +182,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property articleTimeOnSite (base name: "articleTimeOnSite")', function() {
+      // uncomment below and update the code to test the property articleTimeOnSite
+      //var instance = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

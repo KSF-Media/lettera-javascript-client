@@ -80,6 +80,46 @@
         done();
       });
     });
+    describe('presetPresetCategoryGet', function() {
+      it('should call presetPresetCategoryGet successfully', function(done) {
+        //uncomment below and update the code to test presetPresetCategoryGet
+        //instance.presetPresetCategoryGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('presetPresetCategoryPost', function() {
+      it('should call presetPresetCategoryPost successfully', function(done) {
+        //uncomment below and update the code to test presetPresetCategoryPost
+        //instance.presetPresetCategoryPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('scoredPost', function() {
+      it('should call scoredPost successfully', function(done) {
+        //uncomment below and update the code to test scoredPost
+        //instance.scoredPost(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('scoredPresetGet', function() {
+      it('should call scoredPresetGet successfully', function(done) {
+        //uncomment below and update the code to test scoredPresetGet
+        //instance.scoredPresetGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('searchGet', function() {
       it('should call searchGet successfully', function(done) {
         //uncomment below and update the code to test searchGet
