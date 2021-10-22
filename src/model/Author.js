@@ -66,6 +66,9 @@
       if (data.hasOwnProperty('image')) {
         obj['image'] = ApiClient.convertToType(data['image'], 'String');
       }
+      if (data.hasOwnProperty('email')) {
+        obj['email'] = ApiClient.convertToType(data['email'], 'String');
+      }
     }
     return obj;
   }
@@ -78,6 +81,10 @@
    * @member {String} image
    */
   exports.prototype['image'] = undefined;
+  /**
+   * @member {String} email
+   */
+  exports.prototype['email'] = undefined;
 
 
 
