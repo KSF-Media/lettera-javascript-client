@@ -485,6 +485,58 @@
         authNames, contentTypes, accepts, returnType, null, callback
       );
     }
+
+    /**
+     * Callback function to receive the result of the tagTagGet operation.
+     * @callback module:api/ListsApi~tagTagGetCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Returns a list of latest articles by tag
+     * @param {String} tag 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.start 
+     * @param {Number} opts.limit 
+     * @param {module:model/String} opts.paper 
+     * @param {module:api/ListsApi~tagTagGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/ArticleStub>}
+     */
+    this.tagTagGet = function(tag, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+      // verify the required parameter 'tag' is set
+      if (tag === undefined || tag === null) {
+        throw new Error("Missing the required parameter 'tag' when calling tagTagGet");
+      }
+
+      var pathParams = {
+        'tag': tag
+      };
+      var queryParams = {
+        'start': opts['start'],
+        'limit': opts['limit'],
+        'paper': opts['paper'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json;charset=utf-8'];
+      var returnType = [ArticleStub];
+      return this.apiClient.callApi(
+        '/tag/{tag}', 'GET',
+        pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
   };
 
   return exports;

@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**scoredPost**](ListsApi.md#scoredPost) | **POST** /scored | List recent articles sorted by given scoring weights
 [**scoredPresetGet**](ListsApi.md#scoredPresetGet) | **GET** /scored/{preset} | List recent articles sorted by preset scoring
 [**searchGet**](ListsApi.md#searchGet) | **GET** /search | Returns a list of search results
+[**tagTagGet**](ListsApi.md#tagTagGet) | **GET** /tag/{tag} | Returns a list of latest articles by tag
 
 
 
@@ -426,6 +427,59 @@ Name | Type | Description  | Notes
  **limit** | **Number**|  | [optional] 
  **paper** | **String**|  | [optional] 
  **contentQuery** | **String**|  | [optional] 
+
+### Return type
+
+[**[ArticleStub]**](ArticleStub.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+
+## tagTagGet
+
+> [ArticleStub] tagTagGet(tag, opts)
+
+Returns a list of latest articles by tag
+
+### Example
+
+```javascript
+var Lettera = require('lettera');
+
+var apiInstance = new Lettera.ListsApi();
+var tag = "tag_example"; // String | 
+var opts = {
+  'start': 56, // Number | 
+  'limit': 56, // Number | 
+  'paper': "paper_example" // String | 
+};
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+apiInstance.tagTagGet(tag, opts, callback);
+```
+
+### Parameters
+
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tag** | **String**|  | 
+ **start** | **Number**|  | [optional] 
+ **limit** | **Number**|  | [optional] 
+ **paper** | **String**|  | [optional] 
 
 ### Return type
 

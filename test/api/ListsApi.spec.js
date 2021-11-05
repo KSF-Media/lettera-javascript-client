@@ -130,6 +130,16 @@
         done();
       });
     });
+    describe('tagTagGet', function() {
+      it('should call tagTagGet successfully', function(done) {
+        //uncomment below and update the code to test tagTagGet
+        //instance.tagTagGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));
