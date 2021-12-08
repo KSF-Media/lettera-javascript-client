@@ -61,6 +61,7 @@
      * @param {Object} opts Optional parameters
      * @param {String} opts.authUser 
      * @param {String} opts.authorization 
+     * @param {String} opts.xRealIp 
      * @param {Boolean} opts.textonly  (default to false)
      * @param {module:api/ArticlesApi~articleUuidGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/Article}
@@ -83,7 +84,8 @@
       };
       var headerParams = {
         'AuthUser': opts['authUser'],
-        'Authorization': opts['authorization']
+        'Authorization': opts['authorization'],
+        'X-Real-Ip': opts['xRealIp']
       };
       var formParams = {
       };

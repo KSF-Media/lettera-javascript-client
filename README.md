@@ -94,6 +94,7 @@ var uuid = null; // {String}
 var opts = {
   'authUser': null, // {String} 
   'authorization': "authorization_example", // {String} 
+  'xRealIp': "xRealIp_example", // {String} 
   'textonly': false // {Boolean} 
 };
 

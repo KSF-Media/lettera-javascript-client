@@ -27,6 +27,7 @@ var uuid = null; // String |
 var opts = {
   'authUser': null, // String | 
   'authorization': "authorization_example", // String | 
+  'xRealIp': "xRealIp_example", // String | 
   'textonly': false // Boolean | 
 };
 var callback = function(error, data, response) {
@@ -48,6 +49,7 @@ Name | Type | Description  | Notes
  **uuid** | [**String**](.md)|  | 
  **authUser** | [**String**](.md)|  | [optional] 
  **authorization** | **String**|  | [optional] 
+ **xRealIp** | **String**|  | [optional] 
  **textonly** | **Boolean**|  | [optional] [default to false]
 
 ### Return type
