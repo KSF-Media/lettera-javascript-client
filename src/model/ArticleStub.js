@@ -44,6 +44,7 @@
    * @class
    * @param uuid {String} 
    * @param title {String} 
+   * @param articleTitle {String} 
    * @param authors {Array.<module:model/Author>} 
    * @param tags {Array.<String>} 
    * @param premium {Boolean} 
@@ -52,11 +53,12 @@
    * @param paper {module:model/Paper} 
    * @param liveReporting {Boolean} 
    */
-  var exports = function(uuid, title, authors, tags, premium, publishingTime, articleType, paper, liveReporting) {
+  var exports = function(uuid, title, articleTitle, authors, tags, premium, publishingTime, articleType, paper, liveReporting) {
     var _this = this;
 
     _this['uuid'] = uuid;
     _this['title'] = title;
+    _this['articleTitle'] = articleTitle;
     _this['authors'] = authors;
     _this['tags'] = tags;
     _this['premium'] = premium;
@@ -81,6 +83,9 @@
       }
       if (data.hasOwnProperty('title')) {
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
+      }
+      if (data.hasOwnProperty('articleTitle')) {
+        obj['articleTitle'] = ApiClient.convertToType(data['articleTitle'], 'String');
       }
       if (data.hasOwnProperty('authors')) {
         obj['authors'] = ApiClient.convertToType(data['authors'], [Author]);
@@ -136,6 +141,10 @@
    * @member {String} title
    */
   exports.prototype['title'] = undefined;
+  /**
+   * @member {String} articleTitle
+   */
+  exports.prototype['articleTitle'] = undefined;
   /**
    * @member {Array.<module:model/Author>} authors
    */

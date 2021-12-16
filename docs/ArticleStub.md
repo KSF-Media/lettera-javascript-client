@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **String** |  | 
 **title** | **String** |  | 
+**articleTitle** | **String** |  | 
 **authors** | [**[Author]**](Author.md) |  | 
 **tags** | **[String]** |  | 
 **preamble** | **String** |  | [optional] 
