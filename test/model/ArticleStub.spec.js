@@ -92,6 +92,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property mainImage (base name: "mainImage")', function() {
+      // uncomment below and update the code to test the property mainImage
+      //var instance = new Lettera.ArticleStub();
+      //expect(instance).to.be();
+    });
+
     it('should have the property listImage (base name: "listImage")', function() {
       // uncomment below and update the code to test the property listImage
       //var instance = new Lettera.ArticleStub();

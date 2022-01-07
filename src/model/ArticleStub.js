@@ -96,6 +96,9 @@
       if (data.hasOwnProperty('preamble')) {
         obj['preamble'] = ApiClient.convertToType(data['preamble'], 'String');
       }
+      if (data.hasOwnProperty('mainImage')) {
+        obj['mainImage'] = ImageInfo.constructFromObject(data['mainImage']);
+      }
       if (data.hasOwnProperty('listImage')) {
         obj['listImage'] = ImageInfo.constructFromObject(data['listImage']);
       }
@@ -157,6 +160,10 @@
    * @member {String} preamble
    */
   exports.prototype['preamble'] = undefined;
+  /**
+   * @member {module:model/ImageInfo} mainImage
+   */
+  exports.prototype['mainImage'] = undefined;
   /**
    * @member {module:model/ImageInfo} listImage
    */
