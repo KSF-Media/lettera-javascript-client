@@ -86,6 +86,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property classes (base name: "classes")', function() {
+      // uncomment below and update the code to test the property classes
+      //var instance = new Lettera.ImageInfo();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

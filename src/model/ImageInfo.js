@@ -44,12 +44,14 @@
    * @class
    * @param url {String} 
    * @param thumb {String} 
+   * @param classes {Array.<String>} 
    */
-  var exports = function(url, thumb) {
+  var exports = function(url, thumb, classes) {
     var _this = this;
 
     _this['url'] = url;
     _this['thumb'] = thumb;
+    _this['classes'] = classes;
   };
 
   /**
@@ -77,6 +79,9 @@
       if (data.hasOwnProperty('byline')) {
         obj['byline'] = ApiClient.convertToType(data['byline'], 'String');
       }
+      if (data.hasOwnProperty('classes')) {
+        obj['classes'] = ApiClient.convertToType(data['classes'], ['String']);
+      }
     }
     return obj;
   }
@@ -101,6 +106,10 @@
    * @member {String} byline
    */
   exports.prototype['byline'] = undefined;
+  /**
+   * @member {Array.<String>} classes
+   */
+  exports.prototype['classes'] = undefined;
 
 
 
