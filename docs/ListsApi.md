@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## frontpageGet
 
-> [ArticleStub] frontpageGet(opts)
+> Object frontpageGet(opts)
 
 Returns a list for a front page
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ArticleStub]**](ArticleStub.md)
+**Object**
 
 ### Authorization
 
@@ -66,12 +66,12 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8, application/rss+xml
 
 
 ## latestGet
 
-> [ArticleStub] latestGet(opts)
+> Object latestGet(opts)
 
 Returns a list of latest articles
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ArticleStub]**](ArticleStub.md)
+**Object**
 
 ### Authorization
 
@@ -117,7 +117,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8, application/rss+xml
 
 
 ## mostreadGet
@@ -444,7 +444,7 @@ No authorization required
 
 ## tagTagGet
 
-> [ArticleStub] tagTagGet(tag, opts)
+> Object tagTagGet(tag, opts)
 
 Returns a list of latest articles by tag
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ArticleStub]**](ArticleStub.md)
+**Object**
 
 ### Authorization
 
@@ -492,5 +492,5 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8, application/rss+xml
 

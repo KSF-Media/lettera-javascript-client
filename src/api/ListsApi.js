@@ -51,7 +51,7 @@
      * Callback function to receive the result of the frontpageGet operation.
      * @callback module:api/ListsApi~frontpageGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -63,7 +63,7 @@
      * @param {String} opts.category 
      * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~frontpageGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ArticleStub>}
+     * data is of type: {@link Object}
      */
     this.frontpageGet = function(opts, callback) {
       opts = opts || {};
@@ -86,8 +86,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = [ArticleStub];
+      var accepts = ['application/json;charset=utf-8', 'application/rss+xml'];
+      var returnType = Object;
       return this.apiClient.callApi(
         '/frontpage', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
@@ -99,7 +99,7 @@
      * Callback function to receive the result of the latestGet operation.
      * @callback module:api/ListsApi~latestGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -110,7 +110,7 @@
      * @param {Number} opts.limit 
      * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ArticleStub>}
+     * data is of type: {@link Object}
      */
     this.latestGet = function(opts, callback) {
       opts = opts || {};
@@ -132,8 +132,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = [ArticleStub];
+      var accepts = ['application/json;charset=utf-8', 'application/rss+xml'];
+      var returnType = Object;
       return this.apiClient.callApi(
         '/latest', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
@@ -490,7 +490,7 @@
      * Callback function to receive the result of the tagTagGet operation.
      * @callback module:api/ListsApi~tagTagGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -502,7 +502,7 @@
      * @param {Number} opts.limit 
      * @param {module:model/String} opts.paper 
      * @param {module:api/ListsApi~tagTagGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ArticleStub>}
+     * data is of type: {@link Object}
      */
     this.tagTagGet = function(tag, opts, callback) {
       opts = opts || {};
@@ -529,8 +529,8 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
-      var returnType = [ArticleStub];
+      var accepts = ['application/json;charset=utf-8', 'application/rss+xml'];
+      var returnType = Object;
       return this.apiClient.callApi(
         '/tag/{tag}', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
