@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property info (base name: "info")', function() {
+      // uncomment below and update the code to test the property info
+      //var instance = new Lettera.Author();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
