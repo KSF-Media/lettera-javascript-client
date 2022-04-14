@@ -70,6 +70,9 @@
       if (data.hasOwnProperty('thumb')) {
         obj['thumb'] = ApiClient.convertToType(data['thumb'], 'String');
       }
+      if (data.hasOwnProperty('thumbSize')) {
+        obj['thumbSize'] = ApiClient.convertToType(data['thumbSize'], 'Number');
+      }
       if (data.hasOwnProperty('caption')) {
         obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
       }
@@ -94,6 +97,10 @@
    * @member {String} thumb
    */
   exports.prototype['thumb'] = undefined;
+  /**
+   * @member {Number} thumbSize
+   */
+  exports.prototype['thumbSize'] = undefined;
   /**
    * @member {String} caption
    */
