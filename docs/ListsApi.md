@@ -122,7 +122,7 @@ No authorization required
 
 ## mostreadGet
 
-> [ArticleStub] mostreadGet(opts)
+> Object mostreadGet(opts)
 
 Returns a list of most read articles
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ArticleStub]**](ArticleStub.md)
+**Object**
 
 ### Authorization
 

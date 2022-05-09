@@ -145,7 +145,7 @@
      * Callback function to receive the result of the mostreadGet operation.
      * @callback module:api/ListsApi~mostreadGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/ArticleStub>} data The data returned by the service call.
+     * @param {Object} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -158,7 +158,7 @@
      * @param {module:model/String} opts.paper 
      * @param {Boolean} opts.onlySubscribers 
      * @param {module:api/ListsApi~mostreadGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/ArticleStub>}
+     * data is of type: {@link Object}
      */
     this.mostreadGet = function(opts, callback) {
       opts = opts || {};
@@ -183,7 +183,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json;charset=utf-8'];
-      var returnType = [ArticleStub];
+      var returnType = Object;
       return this.apiClient.callApi(
         '/mostread', 'GET',
         pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody,
