@@ -84,7 +84,8 @@ var apiInstance = new Lettera.ListsApi();
 var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
-  'paper': "paper_example" // String | 
+  'paper': "paper_example", // String | 
+  'category': "category_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -105,6 +106,7 @@ Name | Type | Description  | Notes
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **paper** | **String**|  | [optional] 
+ **category** | **String**|  | [optional] 
 
 ### Return type
 

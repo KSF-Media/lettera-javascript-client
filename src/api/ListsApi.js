@@ -109,6 +109,7 @@
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {module:model/String} opts.paper 
+     * @param {String} opts.category 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
@@ -122,6 +123,7 @@
         'start': opts['start'],
         'limit': opts['limit'],
         'paper': opts['paper'],
+        'category': opts['category'],
       };
       var collectionQueryParams = {
       };
