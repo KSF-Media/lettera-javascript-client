@@ -184,7 +184,7 @@
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/json;charset=utf-8'];
+      var accepts = ['application/json;charset=utf-8', 'application/rss+xml'];
       var returnType = Object;
       return this.apiClient.callApi(
         '/mostread', 'GET',
