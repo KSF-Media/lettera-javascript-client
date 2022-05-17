@@ -69,9 +69,6 @@
       if (data.hasOwnProperty('email')) {
         obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
-      if (data.hasOwnProperty('info')) {
-        obj['info'] = ApiClient.convertToType(data['info'], 'String');
-      }
     }
     return obj;
   }
@@ -88,10 +85,6 @@
    * @member {String} email
    */
   exports.prototype['email'] = undefined;
-  /**
-   * @member {String} info
-   */
-  exports.prototype['info'] = undefined;
 
 
 
