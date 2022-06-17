@@ -393,7 +393,7 @@ No authorization required
 
 ## searchGet
 
-> [ArticleStub] searchGet(opts)
+> [ArticleStub] searchGet(contentQuery, opts)
 
 Returns a list of search results
 
@@ -403,11 +403,11 @@ Returns a list of search results
 var Lettera = require('lettera');
 
 var apiInstance = new Lettera.ListsApi();
+var contentQuery = "contentQuery_example"; // String | 
 var opts = {
   'start': 56, // Number | 
   'limit': 56, // Number | 
-  'paper': "paper_example", // String | 
-  'contentQuery': "contentQuery_example" // String | 
+  'paper': "paper_example" // String | 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -416,7 +416,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchGet(opts, callback);
+apiInstance.searchGet(contentQuery, opts, callback);
 ```
 
 ### Parameters
@@ -425,10 +425,10 @@ apiInstance.searchGet(opts, callback);
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **contentQuery** | **String**|  | 
  **start** | **Number**|  | [optional] 
  **limit** | **Number**|  | [optional] 
  **paper** | **String**|  | [optional] 
- **contentQuery** | **String**|  | [optional] 
 
 ### Return type
 

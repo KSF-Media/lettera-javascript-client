@@ -450,17 +450,21 @@
 
     /**
      * Returns a list of search results
+     * @param {String} contentQuery 
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
      * @param {module:model/String} opts.paper 
-     * @param {String} opts.contentQuery 
      * @param {module:api/ListsApi~searchGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/ArticleStub>}
      */
-    this.searchGet = function(opts, callback) {
+    this.searchGet = function(contentQuery, opts, callback) {
       opts = opts || {};
       var postBody = null;
+      // verify the required parameter 'contentQuery' is set
+      if (contentQuery === undefined || contentQuery === null) {
+        throw new Error("Missing the required parameter 'contentQuery' when calling searchGet");
+      }
 
       var pathParams = {
       };
@@ -468,7 +472,7 @@
         'start': opts['start'],
         'limit': opts['limit'],
         'paper': opts['paper'],
-        'contentQuery': opts['contentQuery'],
+        'contentQuery': contentQuery,
       };
       var collectionQueryParams = {
       };
