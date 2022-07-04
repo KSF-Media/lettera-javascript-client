@@ -16,12 +16,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Alignment', 'model/Article', 'model/ArticleStub', 'model/ArticleType', 'model/ArticleTypeDetails', 'model/Author', 'model/Block', 'model/BoxInfo', 'model/BoxType', 'model/Category', 'model/Cutoff', 'model/EventType', 'model/ImageInfo', 'model/Notification', 'model/Paper', 'model/Scoring', 'api/ArticlesApi', 'api/CategoriesApi', 'api/ListsApi', 'api/NotifiersApi'], factory);
+    define(['ApiClient', 'model/Alignment', 'model/Article', 'model/ArticleStub', 'model/ArticleType', 'model/ArticleTypeDetails', 'model/Author', 'model/Block', 'model/BoxInfo', 'model/BoxType', 'model/Category', 'model/Cutoff', 'model/ImageInfo', 'model/Paper', 'model/Scoring', 'api/ArticlesApi', 'api/CategoriesApi', 'api/ListsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Alignment'), require('./model/Article'), require('./model/ArticleStub'), require('./model/ArticleType'), require('./model/ArticleTypeDetails'), require('./model/Author'), require('./model/Block'), require('./model/BoxInfo'), require('./model/BoxType'), require('./model/Category'), require('./model/Cutoff'), require('./model/EventType'), require('./model/ImageInfo'), require('./model/Notification'), require('./model/Paper'), require('./model/Scoring'), require('./api/ArticlesApi'), require('./api/CategoriesApi'), require('./api/ListsApi'), require('./api/NotifiersApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Alignment'), require('./model/Article'), require('./model/ArticleStub'), require('./model/ArticleType'), require('./model/ArticleTypeDetails'), require('./model/Author'), require('./model/Block'), require('./model/BoxInfo'), require('./model/BoxType'), require('./model/Category'), require('./model/Cutoff'), require('./model/ImageInfo'), require('./model/Paper'), require('./model/Scoring'), require('./api/ArticlesApi'), require('./api/CategoriesApi'), require('./api/ListsApi'));
   }
-}(function(ApiClient, Alignment, Article, ArticleStub, ArticleType, ArticleTypeDetails, Author, Block, BoxInfo, BoxType, Category, Cutoff, EventType, ImageInfo, Notification, Paper, Scoring, ArticlesApi, CategoriesApi, ListsApi, NotifiersApi) {
+}(function(ApiClient, Alignment, Article, ArticleStub, ArticleType, ArticleTypeDetails, Author, Block, BoxInfo, BoxType, Category, Cutoff, ImageInfo, Paper, Scoring, ArticlesApi, CategoriesApi, ListsApi) {
   'use strict';
 
   /**
@@ -117,20 +117,10 @@
      */
     Cutoff: Cutoff,
     /**
-     * The EventType model constructor.
-     * @property {module:model/EventType}
-     */
-    EventType: EventType,
-    /**
      * The ImageInfo model constructor.
      * @property {module:model/ImageInfo}
      */
     ImageInfo: ImageInfo,
-    /**
-     * The Notification model constructor.
-     * @property {module:model/Notification}
-     */
-    Notification: Notification,
     /**
      * The Paper model constructor.
      * @property {module:model/Paper}
@@ -155,12 +145,7 @@
      * The ListsApi service constructor.
      * @property {module:api/ListsApi}
      */
-    ListsApi: ListsApi,
-    /**
-     * The NotifiersApi service constructor.
-     * @property {module:api/NotifiersApi}
-     */
-    NotifiersApi: NotifiersApi
+    ListsApi: ListsApi
   };
 
   return exports;

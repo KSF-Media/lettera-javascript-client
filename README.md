@@ -127,7 +127,6 @@ Class | Method | HTTP request | Description
 *Lettera.ListsApi* | [**scoredPresetGet**](docs/ListsApi.md#scoredPresetGet) | **GET** /scored/{preset} | List recent articles sorted by preset scoring
 *Lettera.ListsApi* | [**searchGet**](docs/ListsApi.md#searchGet) | **GET** /search | Returns a list of search results
 *Lettera.ListsApi* | [**tagTagGet**](docs/ListsApi.md#tagTagGet) | **GET** /tag/{tag} | Returns a list of latest articles by tag
-*Lettera.NotifiersApi* | [**notifyPost**](docs/NotifiersApi.md#notifyPost) | **POST** /notify | Listens to OC Notifier
 
 
 ## Documentation for Models
@@ -143,9 +142,7 @@ Class | Method | HTTP request | Description
  - [Lettera.BoxType](docs/BoxType.md)
  - [Lettera.Category](docs/Category.md)
  - [Lettera.Cutoff](docs/Cutoff.md)
- - [Lettera.EventType](docs/EventType.md)
  - [Lettera.ImageInfo](docs/ImageInfo.md)
- - [Lettera.Notification](docs/Notification.md)
  - [Lettera.Paper](docs/Paper.md)
  - [Lettera.Scoring](docs/Scoring.md)
 
