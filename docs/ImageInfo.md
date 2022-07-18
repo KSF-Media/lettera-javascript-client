@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** |  | 
 **thumb** | **String** |  | 
+**tinyThumb** | **String** |  | 
 **thumbSize** | **Number** |  | [optional] 
 **caption** | **String** |  | [optional] 
 **alignment** | [**Alignment**](Alignment.md) |  | [optional] 

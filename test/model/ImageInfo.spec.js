@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property tinyThumb (base name: "tinyThumb")', function() {
+      // uncomment below and update the code to test the property tinyThumb
+      //var instance = new Lettera.ImageInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property thumbSize (base name: "thumbSize")', function() {
       // uncomment below and update the code to test the property thumbSize
       //var instance = new Lettera.ImageInfo();

@@ -44,13 +44,15 @@
    * @class
    * @param url {String} 
    * @param thumb {String} 
+   * @param tinyThumb {String} 
    * @param classes {Array.<String>} 
    */
-  var exports = function(url, thumb, classes) {
+  var exports = function(url, thumb, tinyThumb, classes) {
     var _this = this;
 
     _this['url'] = url;
     _this['thumb'] = thumb;
+    _this['tinyThumb'] = tinyThumb;
     _this['classes'] = classes;
   };
 
@@ -69,6 +71,9 @@
       }
       if (data.hasOwnProperty('thumb')) {
         obj['thumb'] = ApiClient.convertToType(data['thumb'], 'String');
+      }
+      if (data.hasOwnProperty('tinyThumb')) {
+        obj['tinyThumb'] = ApiClient.convertToType(data['tinyThumb'], 'String');
       }
       if (data.hasOwnProperty('thumbSize')) {
         obj['thumbSize'] = ApiClient.convertToType(data['thumbSize'], 'Number');
@@ -97,6 +102,10 @@
    * @member {String} thumb
    */
   exports.prototype['thumb'] = undefined;
+  /**
+   * @member {String} tinyThumb
+   */
+  exports.prototype['tinyThumb'] = undefined;
   /**
    * @member {Number} thumbSize
    */
