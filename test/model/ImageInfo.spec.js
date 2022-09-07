@@ -80,6 +80,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property aoiCropped (base name: "aoiCropped")', function() {
+      // uncomment below and update the code to test the property aoiCropped
+      //var instance = new Lettera.ImageInfo();
+      //expect(instance).to.be();
+    });
+
     it('should have the property caption (base name: "caption")', function() {
       // uncomment below and update the code to test the property caption
       //var instance = new Lettera.ImageInfo();

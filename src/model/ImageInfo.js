@@ -78,6 +78,9 @@
       if (data.hasOwnProperty('thumbSize')) {
         obj['thumbSize'] = ApiClient.convertToType(data['thumbSize'], 'Number');
       }
+      if (data.hasOwnProperty('aoiCropped')) {
+        obj['aoiCropped'] = ApiClient.convertToType(data['aoiCropped'], 'String');
+      }
       if (data.hasOwnProperty('caption')) {
         obj['caption'] = ApiClient.convertToType(data['caption'], 'String');
       }
@@ -110,6 +113,10 @@
    * @member {Number} thumbSize
    */
   exports.prototype['thumbSize'] = undefined;
+  /**
+   * @member {String} aoiCropped
+   */
+  exports.prototype['aoiCropped'] = undefined;
   /**
    * @member {String} caption
    */
