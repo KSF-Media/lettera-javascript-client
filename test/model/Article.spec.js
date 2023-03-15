@@ -188,6 +188,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property removeAds (base name: "removeAds")', function() {
+      // uncomment below and update the code to test the property removeAds
+      //var instance = new Lettera.Article();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

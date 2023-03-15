@@ -52,8 +52,9 @@
    * @param articleType {module:model/ArticleType} 
    * @param relatedArticles {Array.<module:model/ArticleStub>} 
    * @param paper {module:model/Paper} 
+   * @param removeAds {Boolean} 
    */
-  var exports = function(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles, paper) {
+  var exports = function(uuid, title, authors, tags, body, premium, publishingTime, articleType, relatedArticles, paper, removeAds) {
     var _this = this;
 
     _this['uuid'] = uuid;
@@ -66,6 +67,7 @@
     _this['articleType'] = articleType;
     _this['relatedArticles'] = relatedArticles;
     _this['paper'] = paper;
+    _this['removeAds'] = removeAds;
   };
 
   /**
@@ -143,6 +145,9 @@
       }
       if (data.hasOwnProperty('articleTimeOnSite')) {
         obj['articleTimeOnSite'] = ApiClient.convertToType(data['articleTimeOnSite'], 'Number');
+      }
+      if (data.hasOwnProperty('removeAds')) {
+        obj['removeAds'] = ApiClient.convertToType(data['removeAds'], 'Boolean');
       }
     }
     return obj;
@@ -236,6 +241,10 @@
    * @member {Number} articleTimeOnSite
    */
   exports.prototype['articleTimeOnSite'] = undefined;
+  /**
+   * @member {Boolean} removeAds
+   */
+  exports.prototype['removeAds'] = undefined;
 
 
 
