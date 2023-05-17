@@ -108,6 +108,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.start 
      * @param {Number} opts.limit 
+     * @param {String} opts.from 
+     * @param {String} opts.to 
      * @param {module:model/String} opts.paper 
      * @param {String} opts.category 
      * @param {module:api/ListsApi~latestGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -122,6 +124,8 @@
       var queryParams = {
         'start': opts['start'],
         'limit': opts['limit'],
+        'from': opts['from'],
+        'to': opts['to'],
         'paper': opts['paper'],
         'category': opts['category'],
       };
